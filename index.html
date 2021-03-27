@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IK633</title>
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+
+  <script src="./assets/scripts/main.js" defer></script>
+</head>
+
+<body class="Dark_Mode">
+   <script>
+    window.onload=function(){
+      setTimeout(()=>{
+        document.querySelector(".loader").classList.add("loaded")
+      },10000)
+    }
+  </script>
+  <!-- LOADER -->
+  <div class="loader">
+    <div class="container"> 
+      <div class="ball ball_1"></div>
+      <div class="ball ball_2"></div>
+      <div class="ball ball_3"></div>
+    </div>
+  </div>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav__menu">
+      <div class="nav__menu-bar-control if__active">
+        <div class="bar-control">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </div>
+      <div class="nav__menu-logo">
+        <a href="#" class="logo">ik633
+          <!--<img src="/assets/images/logo.jpeg" alt="">-->
+        </a>
+      </div>
+
+      <ul class="nav__menu-ul">
+        <li class="nav__menu-ul-list if__active">
+          <a href="./index.html" class="nav__menu-ul-link active">Home</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="./assets/pages/services/services.html" class="nav__menu-ul-link">Services</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="./assets/pages/about/about.html" class="nav__menu-ul-link">About</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="./assets/pages/services/jobs/jobs.html" class="nav__menu-ul-link">Jobs</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="./assets/pages/contact/contact.html" class="nav__menu-ul-link">Contact</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="./assets/pages/blogs/blogs.html" class="nav__menu-ul-link">blogs</a>
+        </li>
+      </ul>
+      <div class="nav__menu-toggleMode" id="toggleMode">
+        <button class="btn__toggle if__active" onclick="
+            // document.body.classList.toggle('Dark_Mode')
+            let x = document.body.classList;
+            if(x=='default'){
+            x.remove('default');
+            x.add('Dark_Mode');
+        }else{
+            x.remove('Dark_Mode');
+            x.add('default');
+        }
+          ">
+          <img src="./assets/svgs/settings_brightness-24px.svg" alt="toggle mode" / class="invert__this">
+        </button>
+      </div>
+    </nav>
+  </header>
+  <!-- MAIN -->
+  <main class="home__ ctx__flex section" id="home">
+    <div class="hero__ctx">
+      <div class="major__text">
+        <h1>we've got you covered</h1>
+      </div>
+      <div class="btn__container ctx__flex">
+        <a href="#">
+          <button class="prev__btn if__active"><span>&larr;</span></button>
+        </a>
+        <a href="#">
+          <button class="go__btn if__active">more</button>
+        </a>
+        <a href="#">
+          <button class="next__btn if__active"><span>&rarr;</span></button>
+        </a>
+      </div>
+    </div>
+    <div class="hero__ctx-img">
+      <div class="img"></div>
+    </div>
+  </main>
+  <!-- SECTION-A -->
+  <section class="services section" id="services">
+    <div class="section__header">
+      <h3>view our services</h3>
+    </div>
+
+    <div class="services__cards-container">
+      <div class="cards">
+        <div class="card">
+          <div class="card_image">
+            <img src="./assets/svgs/1260333.svg" alt="gadgets" />
+          </div>
+          <div class="card_content">
+            <h4 class="card_content-title">gadgets</h4>
+            <a href="#">&rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_image">
+            <img src="./assets/svgs/2399095ee.svg" alt="real estate" />
+          </div>
+          <div class="card_content">
+            <h4 class="card_content-title">real estate</h4>
+            <a href="#">&rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_image">
+            <img src="./assets/svgs/4437658jj.svg" alt="jobs" />
+          </div>
+          <div class="card_content">
+            <h4 class="card_content-title">jobs</h4>
+            <a href="#">&rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card_image">
+            <img src="./assets/svgs/repairs.svg" alt="gadget repairs" />
+          </div>
+          <div class="card_content">
+            <h4 class="card_content-title">gadget repairs</h4>
+            <a href="#">&rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION-B -->
+
+  <section class="sect-onMore">
+    <div class="wrapper">
+      <div class="container">
+        <div class="bbc">
+          <h3>Quality gadget Fix</h3>
+          <button class="bbc-btn if__active">know more</button>
+        </div>
+        <div class="etc">
+          <div class="img">
+            <img src="./assets/images/main/fixes.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION-C -->
+
+      <div class="container">
+        <div class="etc">
+          <div class="img">
+            <img src="./assets/images/main/estate.jpg" alt="" />
+          </div>
+        </div>
+        <div class="bbc">
+          <h3>Real estates</h3>
+          <button class="bbc-btn if__active">explore all</button>
+        </div>
+      </div>
+
+      <!-- SECTION-D -->
+
+      <div class="container">
+        <div class="bbc">
+          <h3>Find your dream job</h3>
+          <button class="bbc-btn if__active">apply</button>
+        </div>
+        <div class="etc">
+          <div class="img">
+            <img src="./assets/images/main/jobs.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION-E -->
+      <div class="container">
+        <div class="etc">
+          <div class="img">
+            <img src="./assets/images/main/gadgets.jpg" alt="" />
+          </div>
+        </div>
+        <div class="bbc">
+          <h3>Get quality gadgets</h3>
+          <button class="bbc-btn if__active">view gallery</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION-F -->
+  <section class="about section" id="about">
+    <div class="section__header">
+      <h3>a bit about us</h3>
+    </div>
+    <div class="about__cta-bt-container">
+      <div class="gallery-container addBxs">
+        <div class="image img-0">
+          <!-- <img src="./assets/images/main/jobs.jpg" alt="" /> -->
+        </div>
+        <div class="image img-1">
+          <!-- <img src="./assets/images/main/estate.jpg" alt="" /> -->
+        </div>
+        <div class="image img-2">
+          <!-- <img src="./assets/images/main/fixes.jpg" alt="" /> -->
+        </div>
+        <div class="image img-3">
+          <!-- <img src="./assets/images/main/gadgets.jpg" alt="" /> -->
+        </div>
+        <div class="image img-4">
+          <!-- <img src="./assets/images/main/jobs.jpg" alt="" /> -->
+        </div>
+      </div>
+      <div class="txt-container addBxs">
+        <div class="text">
+          <p class="abt-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
+            obcaecati laborum delectus, vero voluptas magnam repellendus
+            libero. Error dicta esse Veritatis aperiam placeat, pariatur
+            incidunt hic quod cupiditate fuga omnis vero odit beatae earum
+            possimus quis! Porro, quae inventore iste, voluptatibus pariatur
+            accusantium deleniti animi, accusamus delectus itaque asperiores
+            ratione unde illum officiis? Repudiandae quaerat accusamus
+            consequatur at maxime, qui debitis voluptas libero voluptatibus
+          </p>
+        </div>
+        <div class="btn__to-conatainer">
+          <button class="btn__to if__active">
+            <span>more about us </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION-C -->
+  <section class="blogs section" id="contact">
+    <div class="section__header">
+      <h3>Top notch</h3>
+    </div>
+    <div class="blogs__container">
+      <div class="wrapper">
+
+        <div class="blog blog-A">
+          <div class="img"><img src="./assets/images/main/estate.jpg" alt=""></div>
+          <div class="content">
+            <div class="blog__header">
+              <h3>top 10 real Estates to go for</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam incidunt recusandae corporis fugit.</p>
+            <button class="btn if__active">read blog</button>
+          </div>
+        </div>
+
+        <div class="blog blog-B">
+          <div class="img"><img src="./assets/images/main/gadgets.jpg" alt=""></div>
+          <div class="content">
+            <div class="blog__header">
+              <h3>most neccessary apple products</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam incidunt recusandae corporis fugit.</p>
+            <button class="btn if__active">read blog</button>
+          </div>
+        </div>
+      </div>
+      <div class="btn__All">
+        <button class="btn__ if__active ">
+          view more
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- WHATSAPP -->
+  <div class="whatApp__API if__active">
+    <div class="wrapper">
+      <div class="img">
+        <img src="./assets/svgs/socials/whatsapp.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact section">
+    <div class="section__header">
+      <h3>Let's connect</h3>
+    </div>
+    <div class="wrapper">
+      <div class="_direct">
+        <div class="img">
+          <span>&boxtimes; </span>
+          <!-- <img src="" alt=""> -->
+        </div>
+        <br><br>
+        <div class="butin">
+          <button>send inbox</button>
+        </div>
+      </div>
+      <div class="_direct">
+        <div class="img">
+          <span>&mapstodown; </span>
+          <!-- <img src="" alt=""> -->
+        </div>
+        <br><br>
+        <div class="butin">
+          <button>find us</button>
+        </div>
+      </div>
+      <div class="_direct">
+        <div class="img">
+          <!-- <img src="./assets/svgs/2399095ee.svg" alt=""> -->
+          <span>&phone;</span>
+        </div>
+        <br><br>
+        <div class="butin">
+          <button>call us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+
+  <footer class="footer section">
+    <div class="footer__wrapper">
+      <div class="container">
+        <br><br><br>
+        <div class="footer__content">
+          <div class="content-A">
+            <ul class="contentUl">
+              <li class="item"><a href="#" class="link">About us</a></li>
+              <li class="item"><a href="#" class="link">Blog page</a></li>
+              <li class="item"><a href="#" class="link">what we offer</a></li>
+              <li class="item">
+                <a href="#" class="link">jobs vacancies</a>
+              <li class="item"><a href="#" class="link">Latest link</a></li>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-B">
+            <ul class="contentUl">
+              <li class="item">
+                <a href="#" class="link">conect with us</a>
+              </li>
+              <li class="item"><a href="#" class="link">meet our team</a></li>
+              <li class="item"><a href="#" class="link">sponsor us</a></li>
+              <li class="item"><a href="#" class="link">developers</a></li>
+              <li class="item"><a href="#" class="link">Latest news</a></li>
+            </ul>
+          </div>
+
+          <div class="content-C">
+            <ul class="contentUl">
+              <li class="item"><a href="#" class="link">our location</a></li>
+              <li class="item"><a href="#" class="link">some link</a></li>
+              <li class="item">
+                <a href="#" class="link">some other link</a>
+              </li>
+              <li class="item"><a href="#" class="link">instagram</a></li>
+              <li class="item"><a href="#" class="link">whatsApp</a></li>
+            </ul>
+          </div>
+          <div class="content-D">
+            <ul class="contentUl">
+              <li class="item"><a href="#" class="link">facebook</a></li>
+              <li class="item">
+                <a href="#" class="link">facebook pages</a>
+              </li>
+
+              <li class="item"><a href="#" class="link">Gmail</a></li>
+              <li class="item"><a href="#" class="link">Twitter</a></li>
+              <li class="item"><a href="#" class="link">youTube</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fair__well">
+          <div class="container">
+            <ul>
+              <li><a href="#">
+                  <img src="./assets/svgs/socials/facebook.svg" alt="facebook">
+                </a></li>
+              <li><a href="#">
+                  <img src="./assets/svgs/socials/instagram.svg" alt="instagram">
+                </a></li>
+              <li><a href="#">
+                  <img src="./assets/svgs/socials/twitter.svg" alt="twitter">
+                </a></li>
+            </ul>
+            <ul>
+              <li><a href="#">
+                  <img src="./assets/svgs/socials/youtube.svg" alt="youtube"></a>
+              </li>
+              <li><a href="#">
+                  <img src="./assets/svgs/socials/gmail.svg" alt="gmail"></a></li>
+              <li><a href="#">
+                  <img src="./assets/svgs/socials/whatsapp.svg" alt="whatsapp"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
