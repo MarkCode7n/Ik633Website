@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs | IK633</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="Dark_Mode">
+  <!-- <script>
+    window.onload=function(){
+      setTimeout(()=>{
+        document.querySelector(".loader").classList.add("loaded")
+      },10000)
+    }
+  </script> -->
+  <div class="loader loaded">
+    <div class="container">
+      <div class="ball ball_1"></div>
+      <div class="ball ball_2"></div>
+      <div class="ball ball_3"></div>
+    </div>
+  </div>
+
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav__menu">
+      <div class="nav__menu-bar-control if__active">
+        <div class="bar-control">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </div>
+      <div class="nav__menu-logo">
+        <a href="../../../../../index.html" class="logo">ik633
+          <!--<img src="/assets/images/logo.jpeg" alt="">-->
+        </a>
+      </div>
+
+      <ul class="nav__menu-ul">
+        <li class="nav__menu-ul-list if__active">
+          <a href="../../../../../index.html" class="nav__menu-ul-link">Home</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="../../../../pages/services/services.html" class="nav__menu-ul-link">Services</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="../../../../pages/about/about.html" class="nav__menu-ul-link">About</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="../../../../pages/services/jobs/jobs.html" class="nav__menu-ul-link">Jobs</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="../../../../pages/contact/contact.html" class="nav__menu-ul-link">Contact</a>
+        </li>
+        <li class="nav__menu-ul-list if__active">
+          <a href="../../../../pages/blogs/blogs.html" class="nav__menu-ul-link active">blogs</a>
+        </li>
+      </ul>
+      <div class="nav__menu-toggleMode" id="toggleMode">
+        <button class="btn__toggle if__active" onclick="
+            // document.body.classList.toggle('Dark_Mode')
+            let x = document.body.classList;
+            if(x=='default'){
+            x.remove('default');
+            x.add('Dark_Mode');
+        }else{
+            x.remove('Dark_Mode');
+            x.add('default');
+        }
+          ">
+          <img src="../../../../svgs/settings_brightness-24px.svg" alt=""  class="invert__this">
+        </button>
+      </div>
+    </nav>
+  </header>
+    <main class="main">
+      <br><br>
+      <div class="wrapper">
+        <div class="container">
+          <div class="cols">
+            <div class="left__col col">
+              <div class="container">
+                <div class="socials_">
+                  <ul class="icons">
+                    <li><a href="#">Like</a></li>
+                    <li><a href="#">Follow</a></li>
+                    <li><a href="#">Tweet</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="main__col col">
+              <div class="container">
+                <div class="header">
+                  <div class="wrap">
+                    <div class="dom">
+                      <div class="tit"><h3>Top 10 Real Estates To Invest In</h3></div>
+                      <div class="desc"><p>Discover the most stunning ease</p></div>
+                    </div>
+                    <div class="author">
+                      <div class="name"><h3></h3></div>
+                      <div class="img">
+                        <img src="./../../../../images/pages/Top10_870x332.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="heading_intro">
+                  <!-- <div class="1"></div>
+                  <div class="2"></div>
+                  <div class="3"></div>
+                  <div class="4"></div>
+                  <div class="5"></div>
+                  <div class="6"></div>
+                  <div class="7"></div>
+                  <div class="8"></div>
+                  <div class="9"></div>
+                  <div class="10"></div> -->
+                  <div class="image">
+                    <img src="../../../../images/pages/pexels-photo-323780.jpeg" alt="">
+                  </div>
+                  <div class="text space1">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati perferendis atque deleniti assumenda nostrum animi excepturi enim doloremque suscipit aliquam quisquam provident, aut, corporis molestias accusantium dignissimos pariatur, dolor et.</p>
+                  </div>
+                  <div class="text space2 outro">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolor tempora consequuntur magnam error eaque facilis debitis, nemo in id quis animi excepturi quisquam obcaecati harum eveniet natus dicta dolores?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right__col col">
+              <div class="other__blogs-container">
+                <div class="other__blogs">
+                  <div class="blog">  
+                    <div class="img">
+                      <img src="" alt="">
+                    </div>
+                    <div class="dom">
+                      <div class="header">
+                        <h3>blog head</h3>
+                        <p>desc</p>
+                      </div>
+                    <div class="btn"><button class="go__next">view blog</button></div>
+                    </div>
+                  </div>
+                  <div class="blog">  
+                    <div class="img">
+                      <img src="" alt="">
+                    </div>
+                    <div class="dom">
+                      <div class="header">
+                        <h3>blog head</h3>
+                        <p>desc</p>
+                      </div>
+                    <div class="btn"><button class="go__next">view blog</button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  
+  <!-- FOOTER -->
+
+  <footer class="footer section">
+    <div class="footer__wrapper">
+      <div class="container">
+        <br><br><br>
+        <div class="footer__content">
+          <div class="content-A">
+            <ul class="contentUl">
+              <li class="item"><a href="#" class="link">About us</a></li>
+              <li class="item"><a href="#" class="link">Blog page</a></li>
+              <li class="item"><a href="#" class="link">what we offer</a></li>
+              <li class="item">
+                <a href="#" class="link">jobs vacancies</a>
+              <li class="item"><a href="#" class="link">Latest link</a></li>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-B">
+            <ul class="contentUl">
+              <li class="item">
+                <a href="#" class="link">conect with us</a>
+              </li>
+              <li class="item"><a href="#" class="link">meet our team</a></li>
+              <li class="item"><a href="#" class="link">sponsor us</a></li>
+              <li class="item"><a href="#" class="link">developers</a></li>
+              <li class="item"><a href="#" class="link">Latest news</a></li>
+            </ul>
+          </div>
+
+          <div class="content-C">
+            <ul class="contentUl">
+              <li class="item"><a href="#" class="link">our location</a></li>
+              <li class="item"><a href="#" class="link">some link</a></li>
+              <li class="item">
+                <a href="#" class="link">some other link</a>
+              </li>
+              <li class="item"><a href="#" class="link">instagram</a></li>
+              <li class="item"><a href="#" class="link">whatsApp</a></li>
+            </ul>
+          </div>
+          <div class="content-D">
+            <ul class="contentUl">
+              <li class="item"><a href="#" class="link">facebook</a></li>
+              <li class="item">
+                <a href="#" class="link">facebook pages</a>
+              </li>
+
+              <li class="item"><a href="#" class="link">Gmail</a></li>
+              <li class="item"><a href="#" class="link">Twitter</a></li>
+              <li class="item"><a href="#" class="link">youTube</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fair__well">
+          <div class="container">
+            <ul>
+              <li><a href="#">
+                  <img src="../../../../svgs/socials/facebook.svg" alt="facebook">
+                </a></li>
+              <li><a href="#">
+                  <img src="../../../../svgs/socials/instagram.svg" alt="instagram">
+                </a></li>
+              <li><a href="#">
+                  <img src="../../../../svgs/socials/twitter.svg" alt="twitter">
+                </a></li>
+            </ul>
+            <ul>
+              <li><a href="#">
+                  <img src="../../../../svgs/socials/youtube.svg" alt="youtube"></a>
+              </li>
+              <li><a href="#">
+                  <img src="../../../../svgs/socials/gmail.svg" alt="gmail"></a></li>
+              <li><a href="#">
+                  <img src="../../../../svgs/socials/whatsapp.svg" alt="whatsapp"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

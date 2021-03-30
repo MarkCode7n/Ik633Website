@@ -10,8 +10,14 @@
 </head>
 
 <body class="Dark_Mode">
-
-  <div class="loader loaded">
+ <script>
+    window.onload=function(){
+      setTimeout(()=>{
+        document.querySelector(".loader").classList.add("loaded")
+      },10000)
+    }
+  </script>
+  <div class="loader">
     <div class="container">
       <div class="ball ball_1"></div>
       <div class="ball ball_2"></div>
@@ -31,20 +37,20 @@
         </div>
       </div>
       <div class="nav__menu-logo">
-        <a href="#" class="logo">ik633
+        <a href="../../../index.html" class="logo">ik633
           <!--<img src="/assets/images/logo.jpeg" alt="">-->
         </a>
       </div>
 
       <ul class="nav__menu-ul">
         <li class="nav__menu-ul-list if__active">
-          <a href="../../../index.html" class="nav__menu-ul-link active">Home</a>
+          <a href="../../../index.html" class="nav__menu-ul-link">Home</a>
         </li>
         <li class="nav__menu-ul-list if__active">
           <a href="../../pages/services/services.html" class="nav__menu-ul-link">Services</a>
         </li>
         <li class="nav__menu-ul-list if__active">
-          <a href="../../pages/about/about.html" class="nav__menu-ul-link">About</a>
+          <a href="../../pages/about/about.html" class="nav__menu-ul-link active">About</a>
         </li>
         <li class="nav__menu-ul-list if__active">
           <a href="../../pages/services/jobs/jobs.html" class="nav__menu-ul-link">Jobs</a>
@@ -75,14 +81,108 @@
   </header>
 
   <main class="main">
-    <h4 class="hero__intro-path">Home / About </h4>
-    <h1 class="hero__intro">
-      About Us
-    </h1>
-    <article class="arrticle">
+    <div class="dom__container">
+      <br>
+      <h4 class="hero__intro-path">Home / About </h4>
+      <h1 class="hero__intro">
+        About Us
+      </h1>
+    </div>
+    <article class="arrticle__top">
+      
       <div class="top__ctx">
+        <div class="vcc">
+
+          <div class="text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit debitis atque non odio ea iure veritatis, nisi
+            praesentium quia. Doloremque dolorem doloribus quo quidem praesentium aliquid eius odit iure accusamus?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit debitis atque non odio ea iure veritatis, nisi
+            praesentium quia. Doloremque dolorem doloribus quo quidem praesentium aliquid eius odit iure accusamus?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit debitis atque non odio ea iure veritatis, nisi
+            praesentium quia. Doloremque dolorem doloribus quo quidem praesentium aliquid eius odit iure accusamus?
+            <p>
+            </p>
+          </div>
+        </div>
+        <div class="vcc image">
+            <div class="image">
+          </div>
+        </div>
+      </div>
+
+      <div class="bt__text">
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia nulla similique illum voluptatem et odit
+            voluptatum eaque, laboriosam minima. Accusantium incidunt ipsam velit ullam blanditiis debitis quisquam,
+            doloremque ratione est id, corporis quos quam sunt beatae aperiam cum, obcaecati temporibus!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia nulla similique illum voluptatem et odit
+            voluptatum eaque, laboriosam minima. Accusantium incidunt ipsam velit ullam blanditiis debitis quisquam,
+            doloremque ratione est id, corporis quos quam sunt beatae aperiam cum, obcaecati temporibus!
+          </p>
+        </div>
       </div>
     </article>
+
+
+    <article class="next__top">
+      <div class="container ">
+        <div class="miss item">
+          <div class="header">
+            <h4>Mission Statement</h4>
+          </div>
+          <div class="content">
+            <div class="text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex veritatis dolore dolor accusantium asperiores placeat.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="viss item">
+          <div class="header">
+            <h4>vision Statement</h4>
+          </div>
+          <div class="content">
+            <div class="text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex veritatis dolore dolor accusantium asperiores placeat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="next__top_next">
+      <div class="core">
+        <div class="header">
+          <h4>core values</h4>
+        </div>
+        <div class="main_core">
+        <div class="wrapper">
+          <div class="ttf">
+            <span class="listStyle">1</span><div class="value"><p>Spirituality</p></div>
+          </div>
+
+          <div class="ttf">
+            <span class="listStyle">2</span><div class="value"><p>Honestly</p></div>
+          </div>
+          <div class="ttf">
+            <span class="listStyle">3</span><div class="value"><p>Humility</p></div>
+          </div>
+          <div class="ttf">
+            <span class="listStyle">4</span><div class="value"><p>Service</p></div>
+          </div>
+          <div class="ttf">
+            <span class="listStyle">5</span><div class="value"><p>Respect</p></div>
+          </div>
+          <div class="ttf">
+            <span class="listStyle">6</span><div class="value"><p>Discipline</p></div>
+          </div>
+          <div class="ttf">
+            <span class="listStyle">7</span><div class="value"><p>Patronage</p></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
   </main>
 
 

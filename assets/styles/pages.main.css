@@ -1,0 +1,20 @@
+.main .hero__intro-path {
+  font-weight: normal;
+}
+
+.main .dom__container {
+  margin: var(--defaultMargin);
+  line-height: 98px;
+}
+
+.main .dom__container h1 {
+  font-size: 3rem;
+}
+
+.main article {
+  color: var(--shaded);
+  margin: var(--defaultMargin);
+  font-size: 20px;
+  line-height: 1.6;
+}
+/*# sourceMappingURL=pages.main.css.map */

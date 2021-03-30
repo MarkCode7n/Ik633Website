@@ -1,0 +1,35 @@
+.loader {
+  z-index: 11;
+  position: fixed;
+  overflow: hidden;
+  transition: 0.3s ease;
+  &.loaded {
+    opacity: 0;
+    z-index: -1;
+  }
+  .container {
+    width: 100vw;
+    height: calc(var(--headerHeight) + 100vh);
+    background-color: var(--BGColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ball {
+      animation: bounce 0.9s ease infinite both;
+      height: var(--loaderBallHeight);
+      margin: 14px;
+      width: var(--loaderBallWidth);
+      background-color: var(--primary_global);
+      border-radius: 50%;
+    }
+    .ball_1 {
+      animation-delay: 0.3s;
+    }
+    .ball_2 {
+      animation-delay: 0.6s;
+    }
+    .ball_3 {
+      animation-delay: 0.8s;
+    }
+  }
+}

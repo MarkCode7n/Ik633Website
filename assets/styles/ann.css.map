@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,UAAU,CAAV,MAAU;EACR,EAAE;IACA,SAAS,EAAE,UAAU;;EAEvB,GAAG;IACD,SAAS,EAAE,UAAU;;EAEvB,IAAI;IACF,SAAS,EAAE,UAAU",
     "sources": [
         "ann.scss"
     ],
