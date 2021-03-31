@@ -372,6 +372,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
   --InvertImg: initial;
   --loaderBallHeight: 45px;
   --loaderBallWidth: 45px;
+  --lightShade: rgb(122, 124, 126);
 }
 
 @media screen and (min-width: 703px) {
@@ -391,6 +392,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
   --BGColor: #222831;
   --FontColor: #ffffff;
   --shaded: #a09a9abf;
+  --lightShade: rgb(208, 212, 216);
 }
 
 body {
@@ -457,47 +459,135 @@ button {
   margin-top: calc(var(--headerHeight));
 }
 
-.main .wrapper .container .cols {
+.main .bloggy__container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (min-width: 780px) {
+  .main .bloggy__container .bloggy {
+    margin: 0 auto;
+    width: 70%;
+    padding: 24px;
+  }
+}
+
+.main .bloggy__container .bloggy {
   margin: var(--defaultMargin);
 }
 
-.main .wrapper .container .cols .col {
-  float: left;
-  width: 100%;
+.main .bloggy__container .bloggy .blog__header h3 {
+  text-transform: capitalize;
+  font-size: 26px;
+  display: inline-block;
+  position: relative;
 }
 
-.main .wrapper .container .cols::after {
+.main .bloggy__container .bloggy .blog__header h3::before {
+  position: absolute;
   content: "";
-  display: table;
-  clear: both;
+  background-color: var(--lightShade);
+  opacity: 0.2;
+  width: 100%;
+  bottom: -20%;
+  height: 2px;
 }
 
-@media screen and (min-width: 680px) {
-  .main .wrapper .container .cols .left__col {
-    width: 15%;
-  }
-  .main .wrapper .container .cols .main__col {
-    width: 65%;
-    padding: 0 24px;
-  }
-  .main .wrapper .container .cols .right__col {
-    width: 20%;
-  }
+.main .bloggy__container .bloggy .blog__header p {
+  color: var(--lightShade);
+  font-size: 21px;
+  margin-top: 12px;
 }
 
-.main .wrapper .container .main__col .container .header .wrap .author {
-  margin: 8px 0px;
+.main .bloggy__container .bloggy .blog__header p::first-letter {
+  text-transform: capitalize;
 }
 
-.main .wrapper .container .main__col .container .header .wrap .author .img {
+.main .bloggy__container .bloggy .mainC .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 18px 0px 0px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.main .bloggy__container .bloggy .mainC .author-image {
+  margin-right: 18px;
   width: 60px;
   height: 60px;
+  border-radius: 100%;
   overflow: hidden;
-  border-radius: 100px;
 }
 
-.main .wrapper .container .main__col .container .heading_intro .text {
+.main .bloggy__container .bloggy .mainC .author-Dom h4 {
+  opacity: 0.8;
+}
+
+.main .bloggy__container .bloggy .mainC .author-Dom span {
+  opacity: 0.7;
+}
+
+.main .bloggy__container .bloggy .mainC .author::before {
+  position: absolute;
+  content: "";
+  background-color: var(--lightShade);
+  opacity: 0.2;
+  width: 100%;
+  bottom: -20%;
+  height: 2px;
+}
+
+.main .bloggy__container .bloggy .mainC .top10 {
+  margin-top: 80px;
+}
+
+.main .bloggy__container .bloggy .mainC .top10 .res .ppt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .bloggy__container .bloggy .mainC .top10 .res .ppt .counter {
+  margin-right: 8px;
+  font-size: 2rem;
+  background-color: var(--primary_global);
+  color: white;
+  -webkit-box-shadow: 1px 0px 20px rgba(95, 93, 93, 0.6);
+          box-shadow: 1px 0px 20px rgba(95, 93, 93, 0.6);
+  border-radius: 50%;
+  padding: 6px;
+  width: 50px;
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+}
+
+.main .bloggy__container .bloggy .mainC .top10 .res .ppt .es h4 {
+  font-size: 24px;
+}
+
+.main .bloggy__container .bloggy .mainC .top10 .res .image {
+  height: 280px;
+  overflow: hidden;
+  margin: 18px 0px 18px 0px;
+  border-radius: 6px;
+}
+
+.main .bloggy__container .bloggy .mainC .top10 .desc p {
   font-size: 21px;
+  color: var(--shaded);
 }
 
 .whatApp__API {
