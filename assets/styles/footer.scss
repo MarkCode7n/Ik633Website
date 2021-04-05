@@ -3,7 +3,7 @@ footer {
     width: 100%;
     .container {
       .footer__content {
-        background-color: #2d343e;
+        background-color: #1b1b1c;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(19rem, 4fr));
         div {
@@ -15,7 +15,8 @@ footer {
               a {
                 font-size: 20px;
                 display: block;
-                color: rgb(154, 60, 243);
+                text-decoration: underline;
+                color: rgb(105, 104, 105);
                 text-transform: capitalize;
               }
             }
@@ -23,7 +24,7 @@ footer {
         }
       }
       .fair__well {
-        background-color: #2d3f58;
+        background-color: #303030;
         .container {
           display: flex;
           min-height: 60px;
@@ -34,7 +35,6 @@ footer {
             display: flex;
             li {
               a {
-                border: 2px solid #fff;
                 display: flex;
                 justify-content: center;
                 align-items: center;

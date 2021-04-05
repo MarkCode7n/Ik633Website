@@ -1,0 +1,124 @@
+.contact__grid {
+  .contact__grid_wrapper {
+    box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
+    max-width: 56pc;
+    margin: var(--defaultMargin) auto;
+    position: relative;
+    position: relative;
+    .BBC {
+      z-index: 1;
+      background-color: var(--primary_global);
+      padding: 13px;
+      height: 350px;
+      min-width: 292px;
+      position: absolute;
+      left: -64px;
+      top: 100px;
+      width: 27%;
+      display: grid;
+      border-radius: 4px;
+      justify-content: center;
+      align-items: center;
+      .contact_us {
+        .dom_ {
+          margin: 24px auto;
+
+          h4 {
+            font-size: 28px;
+          }
+        }
+        .wrapList {
+          .item__listg {
+            .item {
+              .icon {
+              }
+              .text {
+                p {
+                  line-height: 3.6;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .Form {
+      min-height: 500px;
+      position: relative;
+      background-color: var(--BGColor);
+      padding: 14px;
+      .contact_form {
+        margin-left: 19rem;
+        margin-right: 5rem;
+        .dom {
+          margin: 24px auto;
+          h4 {
+            font-size: 28px;
+          }
+          p {
+            line-height: 3.6;
+            color: var(--shaded);
+          }
+        }
+
+        .input {
+          label {
+            font-size: 17px;
+            color: var(--shaded);
+          }
+          input,
+          textarea {
+            width: 100%;
+            font-size: 19px;
+            padding: 8px;
+            background-color: var(--inputColor);
+            font-family: JSan;
+            border: none;
+            color: var(--shaded);
+            outline: none;
+            border-radius: 5px;
+            resize: none;
+            margin: 15px auto;
+          }
+
+          button {
+            padding: 12px;
+            font-size: 21px;
+            text-transform: capitalize;
+            text-align: center;
+            width: 33%;
+            background-color: var(--primary_global);
+            color: white;
+            border-radius: 14px;
+            border: none;
+            box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1035px) {
+      margin: var(--defaultMargin);
+      display: flex;
+      .BBC {
+        position: static;
+        height: initial;
+        align-items: unset;
+        justify-content: initial;
+      }
+      .Form {
+        width: 100%;
+        .contact_form {
+          margin: initial;
+        }
+      }
+    }
+    @media screen and (max-width: 643px) {
+      display: block;
+      .BBC {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+}

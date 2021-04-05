@@ -4,48 +4,8 @@
 @import "../../../../styles/footer.scss";
 @import "../../../../styles/header.scss";
 @import "../../../../styles/pages.main.scss";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  display: run-in;
-  -webkit-tap-highlight-color: transparent;
-}
-
-// VARIABLES
-
-:root {
-  --primary_global: #f08939;
-  --BGColor: #ffffff;
-  --FontColor: #222831;
-  --fontFam: JSan;
-  --logoFontFam: Pacifico;
-  --headerHeight: 4.9rem;
-  --heroFZ: 3.2rem;
-  --shaded: #302e2ebf;
-  --defaultMargin: 50px;
-  --InvertImg: initial;
-  --loaderBallHeight: 45px;
-  --loaderBallWidth: 45px;
-  --lightShade: rgb(122, 124, 126);
-  @media screen and (min-width: 703px) {
-    --heroFZ: 5.3rem;
-  }
-  @media screen and (max-width: 703px) {
-    --defaultMargin: 15px;
-  }
-}
-
-.Dark_Mode {
-  --InvertImg: invert(1);
-  --BGColor: #222831;
-  --FontColor: #ffffff;
-  --shaded: #a09a9abf;
-  --lightShade: rgb(208, 212, 216);
-}
+@import "../../otherBlogs.scss";
+@import "../../../../styles/variables.scss";
 
 body {
   margin: 0 auto;
@@ -89,120 +49,50 @@ button {
 
 .main {
   margin-top: calc(var(--headerHeight));
-  .bloggy__container {
-    display: grid;
-    place-items: center;
-    @media screen and (min-width: 780px) {
-      .bloggy {
-        margin: 0 auto;
-        width: 70%;
-        padding: 24px;
+
+  .top10 {
+    margin-top: 80px;
+    .res {
+      .ppt {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .counter {
+          margin-right: 8px;
+          font-size: 2rem;
+          background-color: var(--primary_global);
+          color: white;
+          box-shadow: 1px 0px 20px rgba(95, 93, 93, 0.6);
+          border-radius: 50%;
+          padding: 6px;
+          width: 50px;
+          height: 50px;
+          display: grid;
+          place-items: center;
+          margin-bottom: 8px;
+        }
+        .es {
+          h4 {
+            font-size: 24px;
+          }
+        }
+      }
+      .image {
+        height: 280px;
+        overflow: hidden;
+        margin: 18px 0px 18px 0px;
+        border-radius: 6px;
       }
     }
-    .bloggy {
-      margin: var(--defaultMargin);
-      .blog__header {
-        h3 {
-          text-transform: capitalize;
-          font-size: 26px;
-          display: inline-block;
-          position: relative;
-          &::before {
-            position: absolute;
-            content: "";
-            background-color: var(--lightShade);
-            opacity: 0.2;
-            width: 100%;
-            bottom: -20%;
-            height: 2px;
-          }
-        }
-        p {
-          color: var(--lightShade);
-          font-size: 21px;
-          &::first-letter {
-            text-transform: capitalize;
-          }
-          margin-top: 12px;
-        }
-      }
-      .mainC {
-        .author {
-          display: flex;
-          margin: 18px 0px 0px 0px;
-          align-items: center;
-          &-image {
-            margin-right: 18px;
-            width: 60px;
-            height: 60px;
-            border-radius: 100%;
-            overflow: hidden;
-          }
-          &-Dom {
-            h4 {
-              opacity: 0.8;
-            }
-            span {
-              opacity: 0.7;
-            }
-          }
-          position: relative;
-          &::before {
-            position: absolute;
-            content: "";
-            background-color: var(--lightShade);
-            opacity: 0.2;
-            width: 100%;
-            bottom: -20%;
-            height: 2px;
-          }
-        }
-
-        .top10 {
-          margin-top: 80px;
-          .res {
-            .ppt {
-              display: flex;
-              justify-content: start;
-              align-items: center;
-              .counter {
-                margin-right: 8px;
-                font-size: 2rem;
-                background-color: var(--primary_global);
-                color: white;
-                box-shadow: 1px 0px 20px rgba(95, 93, 93, 0.6);
-                border-radius: 50%;
-                padding: 6px;
-                width: 50px;
-                height: 50px;
-                display: grid;
-                place-items: center;
-                margin-bottom: 8px;
-              }
-              .es {
-                h4 {
-                  font-size: 24px;
-                }
-              }
-            }
-            .image {
-              height: 280px;
-              overflow: hidden;
-              margin: 18px 0px 18px 0px;
-              border-radius: 6px;
-            }
-          }
-          .desc {
-            p {
-              font-size: 21px;
-              color: var(--shaded);
-            }
-          }
-        }
+    .desc {
+      p {
+        font-size: 21px;
+        color: var(--shaded);
       }
     }
   }
 }
+
 .whatApp__API {
   position: fixed;
   bottom: 20px;

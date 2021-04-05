@@ -4,46 +4,8 @@
 @import "../../styles/footer.scss";
 @import "../../styles/header.scss";
 @import "../../styles/pages.main.scss";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  display: run-in;
-  -webkit-tap-highlight-color: transparent;
-}
-
-// VARIABLES
-
-:root {
-  --primary_global: #f08939;
-  --BGColor: #ffffff;
-  --FontColor: #222831;
-  --fontFam: JSan;
-  --logoFontFam: Pacifico;
-  --headerHeight: 4.9rem;
-  --heroFZ: 3.2rem;
-  --shaded: #302e2ebf;
-  --defaultMargin: 50px;
-  --InvertImg: initial;
-  --loaderBallHeight: 45px;
-  --loaderBallWidth: 45px;
-  @media screen and (min-width: 703px) {
-    --heroFZ: 5.3rem;
-  }
-  @media screen and (max-width: 703px) {
-    --defaultMargin: 15px;
-  }
-}
-
-.Dark_Mode {
-  --InvertImg: invert(1);
-  --BGColor: #222831;
-  --FontColor: #ffffff;
-  --shaded: #a09a9abf;
-}
+@import "../../styles/contact.scss";
+@import "../../styles/variables.scss";
 
 body {
   margin: 0 auto;
@@ -94,6 +56,7 @@ button {
     text-align: center;
   }
 }
+
 .whatApp__API {
   position: fixed;
   bottom: 20px;
