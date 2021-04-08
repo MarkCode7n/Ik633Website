@@ -54,6 +54,54 @@ button {
     text-align: center;
   }
 }
+.form_wrapper {
+  margin: var(--defaultMargin);
+  .form {
+    form {
+      .input {
+        label {
+          font-size: 17px;
+          color: var(--shaded);
+        }
+        input,
+        textarea,
+        select {
+          width: 100%;
+          font-size: 19px;
+          padding: 8px;
+          background-color: var(--inputColor);
+          font-family: JSan;
+          border: none;
+          color: var(--shaded);
+          outline: none;
+          border-radius: 5px;
+          resize: none;
+          margin: 15px auto;
+        }
+        .select {
+          .option {
+          }
+        }
+        textarea {
+        }
+
+        button {
+          padding: 12px;
+          font-size: 21px;
+          text-transform: capitalize;
+          text-align: center;
+
+          background-color: var(--primary_global);
+          color: white;
+          border-radius: 5px;
+          border: none;
+          box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
+        }
+      }
+    }
+  }
+}
+
 .whatApp__API {
   position: fixed;
   bottom: 20px;

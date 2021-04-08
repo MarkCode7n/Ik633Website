@@ -64,12 +64,18 @@ button {
   height: 100vh;
   margin-top: calc(var(--headerHeight));
   position: static;
-
+  background-color: rgb(35, 34, 34 / 70%);
+  background-image: url(../images/pages/Zrzut-ekranu-864.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: luminosity;
+  background-size: cover;
   .hero__ctx {
     .major__text h1 {
       font-size: var(--heroFZ);
       text-align: CENTER;
       text-transform: capitalize;
+      color: rgb(245, 236, 236);
     }
 
     .btn__container {
@@ -86,18 +92,18 @@ button {
         position: relative;
         top: -80px;
         text-transform: capitalize;
-        border-radius: 5px;
+        border-radius: 8px;
         box-shadow: -1px 1px 7px 3px #2d3f583d;
-        border: 3px solid whitesmoke;
-        background-color: var(--primary_global);
+        border: 3px solid var(--primary_global);
+        background-color: transparent;
         color: #fff;
         outline: none;
       }
 
       .prev__btn,
       .next__btn {
-        padding: 25px;
-        font-size: 35px;
+        padding: 22px;
+        font-size: 19px;
         border-radius: 100%;
         outline: none;
         font-weight: bolder;
@@ -107,6 +113,7 @@ button {
         overflow: hidden;
         display: grid;
         top: 80px;
+        color: #fff;
         place-items: center;
 
         span {
@@ -168,7 +175,6 @@ button {
       grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
 
       .card {
-        opacity: 0.8;
         display: flex;
         justify-content: flex-start;
         align-items: center;

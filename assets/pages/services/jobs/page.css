@@ -24,6 +24,7 @@
   --loaderBallHeight: 45px;
   --loaderBallWidth: 45px;
   --lightShade: rgb(122, 124, 126);
+  --inputColor: rgb(223, 215, 215);
 }
 
 @media screen and (min-width: 703px) {
@@ -41,6 +42,7 @@
 .Dark_Mode {
   --InvertImg: invert(1);
   --BGColor: #000;
+  --inputColor: rgb(34, 33, 33);
   --FontColor: #ffffff;
   --shaded: #a09a9abf;
   --lightShade: rgb(208, 212, 216);
@@ -322,8 +324,8 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
   place-items: center;
   overflow: hidden;
   background-color: var(--primary_global);
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   position: relative;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -471,7 +473,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
 }
 
 .main .dom__container h1 {
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 
 .main article {
@@ -548,6 +550,44 @@ button {
   font-size: 2rem;
   text-transform: capitalize;
   text-align: center;
+}
+
+.form_wrapper {
+  margin: var(--defaultMargin);
+}
+
+.form_wrapper .form form .input label {
+  font-size: 17px;
+  color: var(--shaded);
+}
+
+.form_wrapper .form form .input input,
+.form_wrapper .form form .input textarea,
+.form_wrapper .form form .input select {
+  width: 100%;
+  font-size: 19px;
+  padding: 8px;
+  background-color: var(--inputColor);
+  font-family: JSan;
+  border: none;
+  color: var(--shaded);
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  margin: 15px auto;
+}
+
+.form_wrapper .form form .input button {
+  padding: 12px;
+  font-size: 21px;
+  text-transform: capitalize;
+  text-align: center;
+  background-color: var(--primary_global);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
+          box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
 }
 
 .whatApp__API {

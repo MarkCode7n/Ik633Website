@@ -274,8 +274,8 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
   place-items: center;
   overflow: hidden;
   background-color: var(--primary_global);
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   position: relative;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -423,7 +423,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
 }
 
 .main .dom__container h1 {
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 
 .main article {
@@ -433,7 +433,57 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
   line-height: 1.6;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  display: run-in;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --primary_global: #f08939;
+  --BGColor: #ffffff;
+  --FontColor: #222831;
+  --fontFam: JSan;
+  --logoFontFam: Pacifico;
+  --headerHeight: 4.9rem;
+  --heroFZ: 3.2rem;
+  --shaded: #302e2ebf;
+  --defaultMargin: 50px;
+  --InvertImg: initial;
+  --loaderBallHeight: 45px;
+  --loaderBallWidth: 45px;
+  --lightShade: rgb(122, 124, 126);
+  --inputColor: rgb(223, 215, 215);
+}
+
+@media screen and (min-width: 703px) {
+  :root {
+    --heroFZ: 5.3rem;
+  }
+}
+
+@media screen and (max-width: 703px) {
+  :root {
+    --defaultMargin: 15px;
+  }
+}
+
+.Dark_Mode {
+  --InvertImg: invert(1);
+  --BGColor: #000;
+  --inputColor: rgb(34, 33, 33);
+  --FontColor: #ffffff;
+  --shaded: #a09a9abf;
+  --lightShade: rgb(208, 212, 216);
+}
+
 .contact__grid .contact__grid_wrapper {
+  margin-top: var(--defaultMargin);
   -webkit-box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
           box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
   max-width: 56pc;
@@ -446,7 +496,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
   z-index: 1;
   background-color: var(--primary_global);
   padding: 13px;
-  height: 350px;
+  height: 380px;
   min-width: 292px;
   position: absolute;
   left: -64px;
@@ -526,10 +576,9 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
   font-size: 21px;
   text-transform: capitalize;
   text-align: center;
-  width: 33%;
   background-color: var(--primary_global);
   color: white;
-  border-radius: 14px;
+  border-radius: 5px;
   border: none;
   -webkit-box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
           box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
@@ -595,6 +644,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
   --loaderBallHeight: 45px;
   --loaderBallWidth: 45px;
   --lightShade: rgb(122, 124, 126);
+  --inputColor: rgb(223, 215, 215);
 }
 
 @media screen and (min-width: 703px) {
@@ -612,6 +662,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img {
 .Dark_Mode {
   --InvertImg: invert(1);
   --BGColor: #000;
+  --inputColor: rgb(34, 33, 33);
   --FontColor: #ffffff;
   --shaded: #a09a9abf;
   --lightShade: rgb(208, 212, 216);

@@ -55,6 +55,65 @@ button {
     text-align: center;
   }
 }
+.wrapper {
+  .services {
+    .cards {
+      &::after {
+        content: "";
+
+        display: table;
+        clear: both;
+      }
+      margin: var(--defaultMargin);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .card {
+        border: 2px solid var(--primary_global);
+        border-radius: 11px;
+        text-align: center;
+        margin: 10px 8px;
+        flex-grow: 1;
+        width: 180px;
+        float: left;
+        .img {
+          height: 175px;
+          overflow: hidden;
+          img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 11px;
+          }
+        }
+        ._header {
+          text-transform: capitalize;
+          margin-top: 29px;
+          font-size: 24px;
+        }
+        .text {
+          padding: 23px;
+          p {
+            color: var(--shaded);
+          }
+        }
+        .linkTo {
+          margin: 12px;
+          a {
+            color: var(--primary_global);
+            text-transform: capitalize;
+            font-size: 19px;
+            display: block;
+          }
+          padding: 12px;
+          border-radius: 11px;
+          border: 2px solid var(--primary_global);
+        }
+      }
+    }
+  }
+}
+
 .whatApp__API {
   position: fixed;
   bottom: 20px;

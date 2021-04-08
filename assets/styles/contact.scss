@@ -1,5 +1,7 @@
+@import "./variables.scss";
 .contact__grid {
   .contact__grid_wrapper {
+    margin-top: var(--defaultMargin);
     box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
     max-width: 56pc;
     margin: var(--defaultMargin) auto;
@@ -9,7 +11,7 @@
       z-index: 1;
       background-color: var(--primary_global);
       padding: 13px;
-      height: 350px;
+      height: 380px;
       min-width: 292px;
       position: absolute;
       left: -64px;
@@ -87,10 +89,9 @@
             font-size: 21px;
             text-transform: capitalize;
             text-align: center;
-            width: 33%;
             background-color: var(--primary_global);
             color: white;
-            border-radius: 14px;
+            border-radius: 5px;
             border: none;
             box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
           }

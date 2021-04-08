@@ -23,6 +23,7 @@
   --loaderBallHeight: 45px;
   --loaderBallWidth: 45px;
   --lightShade: rgb(122, 124, 126);
+  --inputColor: rgb(223, 215, 215);
 }
 
 @media screen and (min-width: 703px) {
@@ -40,6 +41,7 @@
 .Dark_Mode {
   --InvertImg: invert(1);
   --BGColor: #000;
+  --inputColor: rgb(34, 33, 33);
   --FontColor: #ffffff;
   --shaded: #a09a9abf;
   --lightShade: rgb(208, 212, 216);
