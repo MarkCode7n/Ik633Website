@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./assets/styles/style.css" />
 
   <script src="./assets/scripts/main.js" defer type="module"></script>
+  <script src="./assets/scripts/ls.js" defer type="module"></script>
+  <script src="./assets/scripts/nav.js" defer type="module"></script>
+  <script src="./assets/scripts/apis.js" defer type="module"></script>
 </head>
 
 <body class="Dark_Mode">
@@ -30,7 +33,7 @@
   <!-- NAVBAR -->
   <header class="header">
     <nav class="nav__menu">
-      <div class="nav__menu-bar-control if__active">
+      <div class="nav__menu-bar-control if__active" id="navControl">
         <div class="bar-control">
           <div class="bar bar1"></div>
           <div class="bar bar2"></div>
@@ -43,7 +46,7 @@
         </a>
       </div>
 
-      <ul class="nav__menu-ul">
+      <ul class="nav__menu-ul" id="navUl">
         <li class="nav__menu-ul-list if__active">
           <a href="./index.html" class="nav__menu-ul-link active">Home</a>
         </li>
@@ -64,17 +67,7 @@
         </li>
       </ul>
       <div class="nav__menu-toggleMode" id="toggleMode">
-        <button class="btn__toggle if__active" onclick="
-            // document.body.classList.toggle('Dark_Mode')
-            let x = document.body.classList;
-            if(x=='default'){
-            x.remove('default');
-            x.add('Dark_Mode');
-        }else{
-            x.remove('Dark_Mode');
-            x.add('default');
-        }
-          ">
+        <button class="btn__toggle if__active">
           <img src="./assets/svgs/settings_brightness-24px.svg" alt="toggle mode" / class="invert__this">
         </button>
       </div>
@@ -83,23 +76,21 @@
   <!-- MAIN -->
   <main class="home__ ctx__flex section" id="home">
     <div class="hero__ctx">
-      <div class="major__text">
-        <h1>we've got you covered</h1>
+      <div class="major__text" >
+        <h1 id="mjT1"></h1>
+        <h2 id="mjT2"></h2>
       </div>
       <div class="btn__container ctx__flex">
-        <a href="#">
+        <a href="javascript:void(0)" id="prev__btn">
           <button class="prev__btn if__active"><span>&larr;</span></button>
         </a>
-        <a href="#">
+        <a href="javascript:void(0)" id="gohref">
           <button class="go__btn if__active">more</button>
         </a>
-        <a href="#">
+        <a href="javascript:void(0)" id="next__btn">
           <button class="next__btn if__active"><span>&rarr;</span></button>
         </a>
       </div>
-    </div>
-    <div class="hero__ctx-img">
-      <div class="img"></div>
     </div>
   </main>
   <!-- SECTION-A -->
@@ -295,7 +286,15 @@
     </div>
   </section>
   <!-- WHATSAPP -->
-  <div class="whatApp__API if__active">
+  
+  <div class="whatApp__API if__active wap" id="social">
+    <div class="wrapper">
+      <div class="img">
+        <img src="./assets/svgs/socials/whatsapp.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="whatApp__API if__active msg" id="social">
     <div class="wrapper">
       <div class="img">
         <img src="./assets/svgs/socials/whatsapp.svg" alt="">

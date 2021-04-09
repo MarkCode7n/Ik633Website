@@ -50,7 +50,7 @@
         }
       }
 
-      //when clicked to show menu
+      //when clicked to toggle self
       &.clicked {
         .bar1 {
           transform: rotate(-45deg);
@@ -91,13 +91,21 @@
     &-ul {
       width: 100%;
       position: fixed;
-      right: -100%;
+      right: -105%;
       z-index: 111;
       box-shadow: 5px 10px 11px orange;
       height: 100%;
       top: calc(var(--headerHeight));
       background-color: var(--BGColor);
       transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      &.ready {
+        right: 0%;
+      }
+      @media screen and (min-width: 492px) {
+        &.ready {
+          right: -50%;
+        }
+      }
 
       &-list {
         margin-left: 2rem;

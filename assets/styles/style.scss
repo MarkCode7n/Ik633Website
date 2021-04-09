@@ -59,23 +59,24 @@ button {
 
 //MAIN
 
-.home__ {
+#home {
   z-index: -1;
   height: 100vh;
   margin-top: calc(var(--headerHeight));
   position: static;
-  background-color: rgb(35, 34, 34 / 70%);
-  background-image: url(../images/pages/Zrzut-ekranu-864.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: luminosity;
-  background-size: cover;
+  background: linear-gradient(298deg, black, #68595566),
+    url(../images/pages/Zrzut-ekranu-864.jpg) center/cover no-repeat;
   .hero__ctx {
-    .major__text h1 {
-      font-size: var(--heroFZ);
+    .major__text {
       text-align: CENTER;
-      text-transform: capitalize;
-      color: rgb(245, 236, 236);
+      h1 {
+        font-size: var(--heroFZ);
+        text-transform: capitalize;
+        color: rgb(245, 236, 236);
+      }
+      h2 {
+        color: rgb(252, 197, 95);
+      }
     }
 
     .btn__container {
@@ -117,7 +118,7 @@ button {
         place-items: center;
 
         span {
-          color: var(--FontColor);
+          color: white;
           z-index: 1;
           position: relative;
           top: 0;
@@ -452,26 +453,6 @@ section.sect-onMore {
         margin-top: 24px;
         color: #f5ebe8;
         box-shadow: -1px 1px 7px 3px #2d3f583d;
-      }
-    }
-  }
-}
-
-.whatApp__API {
-  position: fixed;
-  bottom: 20px;
-  right: -100px;
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-  background-color: hsl(132, 90%, 68%);
-  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  z-index: 1;
-  .wrapper {
-    .img {
-      img {
-        width: 100%;
-        height: 100%;
       }
     }
   }

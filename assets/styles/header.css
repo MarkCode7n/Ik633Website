@@ -103,7 +103,7 @@
 .header .nav__menu-ul {
   width: 100%;
   position: fixed;
-  right: -100%;
+  right: -105%;
   z-index: 111;
   -webkit-box-shadow: 5px 10px 11px orange;
           box-shadow: 5px 10px 11px orange;
@@ -112,6 +112,16 @@
   background-color: var(--BGColor);
   -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.header .nav__menu-ul.ready {
+  right: 0%;
+}
+
+@media screen and (min-width: 492px) {
+  .header .nav__menu-ul.ready {
+    right: -50%;
+  }
 }
 
 .header .nav__menu-ul-list {

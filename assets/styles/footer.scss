@@ -46,11 +46,47 @@ footer {
                 img {
                   width: 39px;
                   height: 39px;
+                  opacity: 0.6;
+                  &:hover {
+                    opacity: 1;
+                  }
                 }
               }
             }
           }
         }
+      }
+    }
+  }
+}
+
+.whatApp__API {
+  position: fixed;
+  bottom: 20px;
+  box-shadow: 0px 0px 8px 0px #413434bf;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background-color: hsl(132, 90%, 68%);
+  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  z-index: 1;
+  &.msg {
+    left: -100px;
+    &.slided {
+      left: 15px;
+    }
+  }
+  &.wap {
+    right: -100px;
+    &.slided {
+      right: 15px;
+    }
+  }
+  .wrapper {
+    .img {
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
   }

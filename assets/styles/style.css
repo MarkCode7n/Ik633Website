@@ -269,7 +269,7 @@
 .header .nav__menu-ul {
   width: 100%;
   position: fixed;
-  right: -100%;
+  right: -105%;
   z-index: 111;
   -webkit-box-shadow: 5px 10px 11px orange;
           box-shadow: 5px 10px 11px orange;
@@ -278,6 +278,16 @@
   background-color: var(--BGColor);
   -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.header .nav__menu-ul.ready {
+  right: 0%;
+}
+
+@media screen and (min-width: 492px) {
+  .header .nav__menu-ul.ready {
+    right: -50%;
+  }
 }
 
 .header .nav__menu-ul-list {
@@ -408,6 +418,46 @@ footer .footer__wrapper .container .fair__well .container ul li a {
 footer .footer__wrapper .container .fair__well .container ul li a img {
   width: 39px;
   height: 39px;
+  opacity: 0.6;
+}
+
+footer .footer__wrapper .container .fair__well .container ul li a img:hover {
+  opacity: 1;
+}
+
+.whatApp__API {
+  position: fixed;
+  bottom: 20px;
+  -webkit-box-shadow: 0px 0px 8px 0px #413434bf;
+          box-shadow: 0px 0px 8px 0px #413434bf;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background-color: #64f781;
+  -webkit-transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  z-index: 1;
+}
+
+.whatApp__API.msg {
+  left: -100px;
+}
+
+.whatApp__API.msg.slided {
+  left: 15px;
+}
+
+.whatApp__API.wap {
+  right: -100px;
+}
+
+.whatApp__API.wap.slided {
+  right: 15px;
+}
+
+.whatApp__API .wrapper .img img {
+  width: 100%;
+  height: 100%;
 }
 
 .loader {
@@ -718,27 +768,29 @@ button {
   text-align: center;
 }
 
-.home__ {
+#home {
   z-index: -1;
   height: 100vh;
   margin-top: calc(var(--headerHeight));
   position: static;
-  background-color: #232200;
-  background-image: url(../images/pages/Zrzut-ekranu-864.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: luminosity;
-  background-size: cover;
+  background: linear-gradient(298deg, black, #68595566), url(../images/pages/Zrzut-ekranu-864.jpg) center/cover no-repeat;
 }
 
-.home__ .hero__ctx .major__text h1 {
-  font-size: var(--heroFZ);
+#home .hero__ctx .major__text {
   text-align: CENTER;
+}
+
+#home .hero__ctx .major__text h1 {
+  font-size: var(--heroFZ);
   text-transform: capitalize;
   color: #f5ecec;
 }
 
-.home__ .hero__ctx .btn__container {
+#home .hero__ctx .major__text h2 {
+  color: #fcc55f;
+}
+
+#home .hero__ctx .btn__container {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -752,7 +804,7 @@ button {
           justify-content: space-between;
 }
 
-.home__ .hero__ctx .btn__container .go__btn {
+#home .hero__ctx .btn__container .go__btn {
   padding: 14px;
   font-size: 22px;
   margin-top: 4rem;
@@ -768,8 +820,8 @@ button {
   outline: none;
 }
 
-.home__ .hero__ctx .btn__container .prev__btn,
-.home__ .hero__ctx .btn__container .next__btn {
+#home .hero__ctx .btn__container .prev__btn,
+#home .hero__ctx .btn__container .next__btn {
   padding: 22px;
   font-size: 19px;
   border-radius: 100%;
@@ -786,17 +838,17 @@ button {
   place-items: center;
 }
 
-.home__ .hero__ctx .btn__container .prev__btn span,
-.home__ .hero__ctx .btn__container .next__btn span {
-  color: var(--FontColor);
+#home .hero__ctx .btn__container .prev__btn span,
+#home .hero__ctx .btn__container .next__btn span {
+  color: white;
   z-index: 1;
   position: relative;
   top: 0;
   left: 0;
 }
 
-.home__ .hero__ctx .btn__container .prev__btn::before,
-.home__ .hero__ctx .btn__container .next__btn::before {
+#home .hero__ctx .btn__container .prev__btn::before,
+#home .hero__ctx .btn__container .next__btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -812,18 +864,18 @@ button {
   background-color: var(--primary_global);
 }
 
-.home__ .hero__ctx .btn__container .prev__btn:hover::before, .home__ .hero__ctx .btn__container .prev__btn:active::before,
-.home__ .hero__ctx .btn__container .next__btn:hover::before,
-.home__ .hero__ctx .btn__container .next__btn:active::before {
+#home .hero__ctx .btn__container .prev__btn:hover::before, #home .hero__ctx .btn__container .prev__btn:active::before,
+#home .hero__ctx .btn__container .next__btn:hover::before,
+#home .hero__ctx .btn__container .next__btn:active::before {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.home__ .hero__ctx .btn__container .prev__btn {
+#home .hero__ctx .btn__container .prev__btn {
   left: 20px;
 }
 
-.home__ .hero__ctx .btn__container .next__btn {
+#home .hero__ctx .btn__container .next__btn {
   right: 20px;
 }
 
@@ -1203,23 +1255,5 @@ section.sect-onMore .wrapper .etc .img img {
   color: #f5ebe8;
   -webkit-box-shadow: -1px 1px 7px 3px #2d3f583d;
           box-shadow: -1px 1px 7px 3px #2d3f583d;
-}
-
-.whatApp__API {
-  position: fixed;
-  bottom: 20px;
-  right: -100px;
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-  background-color: #64f781;
-  -webkit-transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  z-index: 1;
-}
-
-.whatApp__API .wrapper .img img {
-  width: 100%;
-  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
