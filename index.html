@@ -12,18 +12,12 @@
   <script src="./assets/scripts/ls.js" defer type="module"></script>
   <script src="./assets/scripts/nav.js" defer type="module"></script>
   <script src="./assets/scripts/apis.js" defer type="module"></script>
+  <script src="./assets/scripts/loader.js"defer type="module"></script>
 </head>
 
 <body class="Dark_Mode">
-   <script>
-    window.onload=function(){
-      setTimeout(()=>{
-        document.querySelector(".loader").classList.add("loaded")
-      },10000)
-    }
-  </script>
   <!-- LOADER -->
-  <div class="loader loaded">
+  <div class="loader" id="loader">
     <div class="container"> 
       <div class="ball ball_1"></div>
       <div class="ball ball_2"></div>
@@ -285,7 +279,7 @@
       </div>
     </div>
   </section>
-  <!-- WHATSAPP -->
+  <!-- social pop-ups -->
   
   <div class="whatApp__API if__active wap" id="social">
     <div class="wrapper">

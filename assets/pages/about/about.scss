@@ -55,25 +55,6 @@ button {
     text-align: center;
   }
 }
-.whatApp__API {
-  position: fixed;
-  bottom: 20px;
-  right: -100px;
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-  background-color: hsl(132, 90%, 68%);
-  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  z-index: 1;
-  .wrapper {
-    .img {
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
 .main {
   .arrticle__top {
     .top__ctx {

@@ -771,7 +771,6 @@ button {
 #home {
   z-index: -1;
   height: 100vh;
-  margin-top: calc(var(--headerHeight));
   position: static;
   background: linear-gradient(298deg, black, #68595566), url(../images/pages/Zrzut-ekranu-864.jpg) center/cover no-repeat;
 }
@@ -895,8 +894,8 @@ button {
   display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: (minmax(16rem, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
 .services__cards-container .cards .card {
@@ -978,8 +977,8 @@ section.sect-onMore .wrapper .container {
     display: -ms-grid;
     display: grid;
     gap: 20px;
-    -ms-grid-columns: (minmax(24rem, 3fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(24rem, 3fr));
+    -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   }
 }
 
@@ -1054,8 +1053,8 @@ section.sect-onMore .wrapper .etc .img img {
   margin: 0px var(--defaultMargin);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(16rem, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
 .about__cta-bt-container .addBxs {

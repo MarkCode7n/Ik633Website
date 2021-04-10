@@ -7,17 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About IK633</title>
   <link rel="stylesheet" href="./about.css" />
+  
+  <script src="../../scripts/ls.js" defer type="module"></script>
+  <script src="../../scripts/nav.js" defer type="module"></script>
+  <script src="../../scripts/apis.js" defer type="module"></script>
+  <script src="../../scripts/loader.js"defer type="module"></script>
 </head>
 
 <body class="Dark_Mode">
- <script>
-    window.onload=function(){
-      setTimeout(()=>{
-        document.querySelector(".loader").classList.add("loaded")
-      },10000)
-    }
-  </script>
-  <div class="loader">
+ 
+  <div class="loader"id="loader">
     <div class="container">
       <div class="ball ball_1"></div>
       <div class="ball ball_2"></div>
@@ -29,7 +28,7 @@
   <!-- NAVBAR -->
   <header class="header">
     <nav class="nav__menu">
-      <div class="nav__menu-bar-control if__active">
+      <div class="nav__menu-bar-control if__active"id="navControl">
         <div class="bar-control">
           <div class="bar bar1"></div>
           <div class="bar bar2"></div>
@@ -42,7 +41,7 @@
         </a>
       </div>
 
-      <ul class="nav__menu-ul">
+      <ul class="nav__menu-ul" id="navUl">
         <li class="nav__menu-ul-list if__active">
           <a href="../../../index.html" class="nav__menu-ul-link">Home</a>
         </li>
@@ -158,7 +157,7 @@
         <div class="main_core">
         <div class="wrapper">
           <div class="ttf">
-            <span class="listStyle">1</span><div class="value"><p>Spirituality</p></div>
+            <span class="listStyle">1</span><div class="value"><p>Product</p></div>
           </div>
 
           <div class="ttf">
@@ -187,8 +186,16 @@
 
 
 
-  <!-- WHATSAPP -->
-  <div class="whatApp__API if__active">
+   <!-- social pop-ups -->
+  
+  <div class="whatApp__API if__active wap" id="social">
+    <div class="wrapper">
+      <div class="img">
+        <img src="../../svgs/socials/whatsapp.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="whatApp__API if__active msg" id="social">
     <div class="wrapper">
       <div class="img">
         <img src="../../svgs/socials/whatsapp.svg" alt="">

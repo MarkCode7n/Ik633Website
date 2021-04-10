@@ -62,7 +62,7 @@ button {
 #home {
   z-index: -1;
   height: 100vh;
-  margin-top: calc(var(--headerHeight));
+
   position: static;
   background: linear-gradient(298deg, black, #68595566),
     url(../images/pages/Zrzut-ekranu-864.jpg) center/cover no-repeat;
@@ -173,7 +173,7 @@ button {
       margin-top: 40px;
       display: grid;
       gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 
       .card {
         display: flex;
@@ -231,7 +231,7 @@ section.sect-onMore {
       @media screen and (min-width: 768px) {
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(24rem, 3fr));
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
       }
       display: flex;
       flex-direction: column;
@@ -290,7 +290,7 @@ section.sect-onMore {
   &__cta-bt-container {
     margin: 0px var(--defaultMargin);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 
     .addBxs {
       padding: 10px;

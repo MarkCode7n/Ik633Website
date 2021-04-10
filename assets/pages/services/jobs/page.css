@@ -639,22 +639,4 @@ button {
   -webkit-box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
           box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
 }
-
-.whatApp__API {
-  position: fixed;
-  bottom: 20px;
-  right: -100px;
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-  background-color: #64f781;
-  -webkit-transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  z-index: 1;
-}
-
-.whatApp__API .wrapper .img img {
-  width: 100%;
-  height: 100%;
-}
 /*# sourceMappingURL=page.css.map */

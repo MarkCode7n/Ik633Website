@@ -46,4 +46,8 @@
   --shaded: #a09a9abf;
   --lightShade: rgb(208, 212, 216);
 }
+
+.rmv_grid {
+  display: block;
+}
 /*# sourceMappingURL=variables.css.map */
