@@ -47,6 +47,10 @@
   --lightShade: rgb(208, 212, 216);
 }
 
+.rmv_grid {
+  display: block;
+}
+
 .contact__grid .contact__grid_wrapper {
   margin-top: var(--defaultMargin);
   -webkit-box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);

@@ -29,7 +29,7 @@ window.DefinePage.SetBarner = function () {
     e.animate(
       [
         {
-          opacity: 0.4,
+          opacity: 1,
         },
         {
           opacity: 0.8,

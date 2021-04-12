@@ -48,6 +48,10 @@
   --lightShade: rgb(208, 212, 216);
 }
 
+.rmv_grid {
+  display: block;
+}
+
 @-webkit-keyframes bounce {
   0% {
     -webkit-transform: scale(0.5);
@@ -433,7 +437,6 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
   height: 55px;
   width: 55px;
   border-radius: 50%;
-  background-color: #64f781;
   -webkit-transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   z-index: 1;
@@ -560,6 +563,10 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
   --FontColor: #ffffff;
   --shaded: #a09a9abf;
   --lightShade: rgb(208, 212, 216);
+}
+
+.rmv_grid {
+  display: block;
 }
 
 .contact__grid .contact__grid_wrapper {
