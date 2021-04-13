@@ -4,7 +4,7 @@ window.DefinePage.Msg = function () {
     const scroll_height = window.pageYOffset;
     const socials = document.querySelectorAll("#social");
     const footer_height = document
-      .querySelector("footer .fair__well  ")
+      .querySelector("footer .fair__well")
       .getBoundingClientRect().top;
     socials.forEach((ss) => {
       // console.log(scroll_height);
