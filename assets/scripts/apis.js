@@ -21,6 +21,38 @@ window.DefinePage.Msg = function () {
   };
 };
 
+window.DefinePage.addClass = function () {
+  const $ = (e) => document.querySelector(e);
+  let elems = [
+    $("footer .footer__content"),
+    // $(".blogs__container .wrapper"),
+    // $(".services__cards-container .cards"),
+  ];
+
+  addClass(elems);
+  function addClass(elems = []) {
+    if (window.screen.availWidth <= 334) {
+      elems.forEach((elem) => {
+        elem.style.removeProperty("display", "grid");
+        elem.style.setProperty("display", "block");
+      });
+      // elems[2].querySelectorAll(".card").forEach((e) => {
+      //   e.style.setProperty("margin-top", "15px");
+      // });
+    } else {
+      elems.forEach((elem) => {
+        elem.style.setProperty("display", "grid");
+        elem.style.removeProperty("display", "block");
+      });
+      elems[2].querySelectorAll(".card").forEach((e) => {
+        e.style.setProperty("margin-top", "auto");
+      });
+    }
+  }
+  window.onresize = function () {
+    addClass(elems);
+  };
+};
 window["addEventListener"]("DOMContentLoaded", () => {
-  return window.DefinePage.Msg();
+  return window.DefinePage.Msg(), window.DefinePage.addClass();
 });

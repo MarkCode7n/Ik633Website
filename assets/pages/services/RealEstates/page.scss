@@ -1,11 +1,11 @@
+@import "../../../styles/variables.scss";
 @import url("../../../styles/fonts.css");
 @import "../../../styles/ann.scss";
 @import "../../../styles/loader.scss";
 @import "../../../styles/footer.scss";
 @import "../../../styles/header.scss";
 @import "../../../styles/pages.main.scss";
-@import "../../../styles/variables.scss";
-
+@import "../WM.scss";
 body {
   margin: 0 auto;
   font-family: var(--fontFam);
@@ -55,21 +55,49 @@ button {
     text-align: center;
   }
 }
-.whatApp__API {
-  position: fixed;
-  bottom: 20px;
-  right: -100px;
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-  background-color: hsl(132, 90%, 68%);
-  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  z-index: 1;
-  .wrapper {
-    .img {
-      img {
-        width: 100%;
-        height: 100%;
+.form_wrapper {
+  margin: var(--defaultMargin);
+  .form {
+    form {
+      .input {
+        label {
+          font-size: 17px;
+          color: var(--shaded);
+        }
+        input,
+        textarea,
+        select {
+          width: 100%;
+          font-size: 19px;
+          padding: 8px;
+          background-color: var(--inputColor);
+          font-family: JSan;
+          border: none;
+          color: var(--shaded);
+          outline: none;
+          border-radius: 5px;
+          resize: none;
+          margin: 15px auto;
+        }
+        .select {
+          .option {
+          }
+        }
+        textarea {
+        }
+
+        button {
+          padding: 12px;
+          font-size: 21px;
+          text-transform: capitalize;
+          text-align: center;
+
+          background-color: var(--primary_global);
+          color: white;
+          border-radius: 5px;
+          border: none;
+          box-shadow: 1px 0px 20px rgba(114, 92, 92, 0.6);
+        }
       }
     }
   }

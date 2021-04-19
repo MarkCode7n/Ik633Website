@@ -5,19 +5,17 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Real Estates | IK633</title>
+  <title>Apply For A Job | IK633</title>
   <link rel="stylesheet" href="./page.css" />
+    <script src="../../../scripts/ls.js" defer type="module"></script>
+  <script src="../../../scripts/nav.js" defer type="module"></script>
+  <script src="../../../scripts/apis.js" defer type="module"></script>
+  <script src="../../../scripts/loader.js"defer type="module"></script>
 </head>
 
 <body class="Dark_Mode">
- <script>
-    window.onload=function(){
-      setTimeout(()=>{
-        document.querySelector(".loader").classList.add("loaded")
-      },10000)
-    }
-  </script>
-  <div class="loader">
+
+  <div class="loader" id="loader">
     <div class="container">
       <div class="ball ball_1"></div>
       <div class="ball ball_2"></div>
@@ -29,7 +27,7 @@
   <!-- NAVBAR -->
   <header class="header">
     <nav class="nav__menu">
-      <div class="nav__menu-bar-control if__active">
+      <div class="nav__menu-bar-control if__active" id="navControl">
         <div class="bar-control">
           <div class="bar bar1"></div>
           <div class="bar bar2"></div>
@@ -42,7 +40,7 @@
         </a>
       </div>
 
-      <ul class="nav__menu-ul">
+      <ul class="nav__menu-ul" id="navUl">
         <li class="nav__menu-ul-list if__active">
           <a href="../../../../index.html" class="nav__menu-ul-link">Home</a>
         </li>
@@ -50,10 +48,10 @@
           <a href="../../../pages/services/services.html" class="nav__menu-ul-link">Services</a>
         </li>
         <li class="nav__menu-ul-list if__active">
-          <a href="../../../pages/about/about.html" class="nav__menu-ul-link active">About</a>
+          <a href="../../../pages/about/about.html" class="nav__menu-ul-link">About</a>
         </li>
         <li class="nav__menu-ul-list if__active">
-          <a href="../../../pages/services/jobs/jobs.html" class="nav__menu-ul-link">Jobs</a>
+          <a href="../../../pages/services/jobs/jobs.html" class="nav__menu-ul-link active">Jobs</a>
         </li>
         <li class="nav__menu-ul-list if__active">
           <a href="../../../pages/contact/contact.html" class="nav__menu-ul-link">Contact</a>
@@ -63,17 +61,7 @@
         </li>
       </ul>
       <div class="nav__menu-toggleMode" id="toggleMode">
-        <button class="btn__toggle if__active" onclick="
-            // document.body.classList.toggle('Dark_Mode')
-            let x = document.body.classList;
-            if(x=='default'){
-            x.remove('default');
-            x.add('Dark_Mode');
-        }else{
-            x.remove('Dark_Mode');
-            x.add('default');
-        }
-          ">
+        <button class="btn__toggle if__active">
           <img src="../../../svgs/settings_brightness-24px.svg" alt="" / class="invert__this">
         </button>
       </div>
@@ -82,23 +70,98 @@
 
 
   <main class="main">
-    <div class="dom__container">
-      <br>
-      <h4 class="hero__intro-path">Home / Services / Real Estates </h4>
-      <h1 class="hero__intro">
-      </h1>
+    <div class="wrapper">
+  <div class="container">
+    <div class="api__container">
+      <div class="whatsApp social">
+        <div class="img">
+          <img src="../../../svgs/newwta.svg" alt="">
+        </div>
+        <div class="button">
+          <button class="wta">
+            chat on wahtsApp
+          </button>
+        </div>
+      </div>
+      <div class="messanger social">
+        <div class="img">
+          <img src="../../../svgs/newmsg.svg" alt="">
+        </div>
+         <div class="button">
+          <button class="msg"> chat on messanger</button>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
   </main>
+  <!-- <div class="dom__container">
+    <br>
+    <h4 class="hero__intro-path">Home / Services / Jobs </h4>
+    <h1 class="hero__intro">
+   Apply For a Job
+    </h1>
+  </div>
+
+  <div class="form_wrapper">
+    <div class="form">
+      <form action="#">
+        <div class="input">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+       </div>
+        <div class="input">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+       </div>
+        <div class="input">
+          <label for="phone">Phone</label>
+          <input type="number" id="phone" name="phone">
+       </div>
+        <div class="input">
+          <label for="path">Category</label>
+         <select name="path" id="path">
+           <option value="option1">option1</option>
+           <option value="option2">option2</option>
+           <option value="option3">option3</option>
+           <option value="option4">option4</option>
+           <option value="option5">option5</option>
+           <option value="option6">option6</option>
+           <option value="option7">option7</option>
+           <option value="option8">option8</option>
+         </select>
+       </div>
+       <div class="input">
+         <label for="info">More info(optional)</label>
+         <textarea name="info" id="info" cols="10" rows="10"></textarea>
+       </div>
+       <div class="input">
+         <label for="resume">Upload resume</label>
+         <input type="file"name="resume" id="resume" style="cursor: pointer;"/>
+       </div>
+       <div class="input btn">
+         <button type="submit">Submit</button>
+       </div>
+      </form>
+    </div>
+  </div> -->
+
+ <!-- social pop-ups -->
   
-  <!-- WHATSAPP -->
-  <div class="whatApp__API if__active">
+  <div class="whatApp__API if__active wap" id="social">
     <div class="wrapper">
       <div class="img">
         <img src="../../../svgs/socials/whatsapp.svg" alt="">
       </div>
     </div>
   </div>
-
+  <div class="whatApp__API if__active msg" id="social">
+    <div class="wrapper">
+      <div class="img">
+        <img src="../../../svgs/socials/messanger.svg" alt="">
+      </div>
+    </div>
+  </div>
   <!-- FOOTER -->
 
   <footer class="footer section">

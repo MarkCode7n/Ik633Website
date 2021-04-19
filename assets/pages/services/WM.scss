@@ -1,0 +1,51 @@
+.main {
+  .wrapper {
+    .container {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      position: relative;
+      .api__container {
+        display: flex;
+        margin-top: calc(var(--headerHeight));
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .social {
+          width: 18rem;
+          display: flex;
+          padding: 20px;
+          margin: 14px;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .img {
+            img {
+              width: 18rem;
+            }
+          }
+          .button {
+            button {
+              padding: 12px;
+              font-size: 1.1rem;
+              text-transform: capitalize;
+              cursor: pointer;
+              color: white;
+              border: 3px solid #dddd;
+              border-radius: 5px;
+              margin-top: 14px;
+              outline-color: #9999;
+            }
+            .wta {
+              background-color: #25d366;
+            }
+            .msg {
+              background-color: #006aff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
