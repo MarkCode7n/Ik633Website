@@ -5,19 +5,17 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Gadgets | IK633</title>
+  <title>Services | Gagets | IK633</title>
   <link rel="stylesheet" href="./page.css" />
+    <script src="../../../scripts/ls.js" defer type="module"></script>
+  <script src="../../../scripts/nav.js" defer type="module"></script>
+  <script src="../../../scripts/apis.js" defer type="module"></script>
+  <script src="../../../scripts/loader.js"defer type="module"></script>
 </head>
 
 <body class="Dark_Mode">
- <script>
-    window.onload=function(){
-      setTimeout(()=>{
-        document.querySelector(".loader").classList.add("loaded")
-      },10000)
-    }
-  </script>
-  <div class="loader">
+
+  <div class="loader" id="loader">
     <div class="container">
       <div class="ball ball_1"></div>
       <div class="ball ball_2"></div>
@@ -29,7 +27,7 @@
   <!-- NAVBAR -->
   <header class="header">
     <nav class="nav__menu">
-      <div class="nav__menu-bar-control if__active">
+      <div class="nav__menu-bar-control if__active" id="navControl">
         <div class="bar-control">
           <div class="bar bar1"></div>
           <div class="bar bar2"></div>
@@ -42,18 +40,18 @@
         </a>
       </div>
 
-      <ul class="nav__menu-ul">
+      <ul class="nav__menu-ul" id="navUl">
         <li class="nav__menu-ul-list if__active">
           <a href="../../../../index.html" class="nav__menu-ul-link">Home</a>
         </li>
         <li class="nav__menu-ul-list if__active">
-          <a href="../../../pages/services/services.html" class="nav__menu-ul-link">Services</a>
+          <a href="../../../pages/services/services.html" class="nav__menu-ul-link active">Services</a>
         </li>
         <li class="nav__menu-ul-list if__active">
-          <a href="../../../pages/about/about.html" class="nav__menu-ul-link active">About</a>
+          <a href="../../../pages/about/about.html" class="nav__menu-ul-link">About</a>
         </li>
         <li class="nav__menu-ul-list if__active">
-          <a href="../../../pages/services/jobs/jobs.html" class="nav__menu-ul-link">Jobs</a>
+          <a href="../../../pages/services/jobs/jobs.html" class="nav__menu-ul-link ">Outsourcing</a>
         </li>
         <li class="nav__menu-ul-list if__active">
           <a href="../../../pages/contact/contact.html" class="nav__menu-ul-link">Contact</a>
@@ -63,17 +61,7 @@
         </li>
       </ul>
       <div class="nav__menu-toggleMode" id="toggleMode">
-        <button class="btn__toggle if__active" onclick="
-            // document.body.classList.toggle('Dark_Mode')
-            let x = document.body.classList;
-            if(x=='default'){
-            x.remove('default');
-            x.add('Dark_Mode');
-        }else{
-            x.remove('Dark_Mode');
-            x.add('default');
-        }
-          ">
+        <button class="btn__toggle if__active">
           <img src="../../../svgs/settings_brightness-24px.svg" alt="" / class="invert__this">
         </button>
       </div>
@@ -81,26 +69,49 @@
   </header>
 
 
- 
   <main class="main">
-    <div class="dom__container">
-      <br>
-      <h4 class="hero__intro-path">Home / Services / Gadgets </h4>
-      <h1 class="hero__intro">
-        About Us
-      </h1>
+    <div class="wrapper">
+  <div class="container">
+    <div class="api__container">
+      <div class="whatsApp social">
+        <div class="img">
+          <img src="../../../svgs/newwta.svg" alt="">
+        </div>
+        <div class="button">
+          <button class="wta">
+            chat on wahtsApp
+          </button>
+        </div>
+      </div>
+      <div class="messanger social">
+        <div class="img">
+          <img src="../../../svgs/newmsg.svg" alt="">
+        </div>
+         <div class="button">
+          <button class="msg"> chat on messanger</button>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
   </main>
+
+ <!-- social pop-ups -->
   
-  <!-- WHATSAPP -->
-  <div class="whatApp__API if__active">
+  <!-- <div class="whatApp__API if__active wap" id="social">
     <div class="wrapper">
       <div class="img">
         <img src="../../../svgs/socials/whatsapp.svg" alt="">
       </div>
     </div>
   </div>
-
+  <div class="whatApp__API if__active msg" id="social">
+    <div class="wrapper">
+      <div class="img">
+        <img src="../../../svgs/socials/messanger.svg" alt="">
+      </div>
+    </div>
+  </div> -->
   <!-- FOOTER -->
 
   <footer class="footer section">
@@ -160,23 +171,23 @@
           <div class="container">
             <ul>
               <li><a href="#">
-                  <img src="../../svgs/socials/facebook.svg" alt="facebook">
+                  <img src="../../../svgs/socials/facebook.svg" alt="facebook">
                 </a></li>
               <li><a href="#">
-                  <img src="../../svgs/socials/instagram.svg" alt="instagram">
+                  <img src="../../../svgs/socials/instagram.svg" alt="instagram">
                 </a></li>
               <li><a href="#">
-                  <img src="../../svgs/socials/twitter.svg" alt="twitter">
+                  <img src="../../../svgs/socials/twitter.svg" alt="twitter">
                 </a></li>
             </ul>
             <ul>
               <li><a href="#">
-                  <img src="../../svgs/socials/youtube.svg" alt="youtube"></a>
+                  <img src="../../../svgs/socials/youtube.svg" alt="youtube"></a>
               </li>
               <li><a href="#">
-                  <img src="../../svgs/socials/gmail.svg" alt="gmail"></a></li>
+                  <img src="../../../svgs/socials/gmail.svg" alt="gmail"></a></li>
               <li><a href="#">
-                  <img src="../../svgs/socials/whatsapp.svg" alt="whatsapp"></a></li>
+                  <img src="../../../svgs/socials/whatsapp.svg" alt="whatsapp"></a></li>
             </ul>
           </div>
         </div>

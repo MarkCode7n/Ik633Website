@@ -90,7 +90,7 @@ button {
             h3 {
               text-transform: capitalize;
               font-size: 26px;
-              color: rgb(238, 116, 71);
+              color: var(--demo_green);
             }
             p {
               margin-top: 8px;
@@ -104,7 +104,7 @@ button {
               padding: 9px 23px;
               //  position: absolute;
               //  bottom: 0%;
-              background-color: tomato;
+              background-color: var(--demo_green);
               border-radius: 8px;
               margin-top: 16px;
               font-size: 20px;
@@ -118,7 +118,7 @@ button {
           padding: 14px;
           font-size: 22px;
           text-transform: capitalize;
-          background-color: #ee7447;
+          background-color: var(--demo_green);
           border: 3px solid #ece6e6;
           border-radius: 5px;
           margin-top: 24px;

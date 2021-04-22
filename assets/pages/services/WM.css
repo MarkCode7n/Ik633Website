@@ -44,8 +44,16 @@
           flex-direction: column;
 }
 
+.main .wrapper .container .api__container .social .img {
+  padding: 26px;
+  -webkit-box-shadow: 1px -1px 12px #42c542;
+          box-shadow: 1px -1px 12px #42c542;
+  border-radius: 50%;
+}
+
 .main .wrapper .container .api__container .social .img img {
-  width: 18rem;
+  width: 9rem;
+  margin: 8px;
 }
 
 .main .wrapper .container .api__container .social .button button {

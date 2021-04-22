@@ -21,8 +21,12 @@
           align-items: center;
           flex-direction: column;
           .img {
+            padding: 26px;
+            box-shadow: 1px -1px 12px rgb(66, 197, 66);
+            border-radius: 50%;
             img {
-              width: 18rem;
+              width: 9rem;
+              margin: 8px;
             }
           }
           .button {

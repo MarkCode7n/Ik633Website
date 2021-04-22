@@ -120,6 +120,9 @@
   overflow: hidden;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  background-color: var(--BGColor);
+  width: 100%;
+  height: 100%;
 }
 
 .loader.loaded {
@@ -311,8 +314,10 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  background: var(--primary_global);
+  border: 3px solid var(--primary_global);
   overflow: hidden;
-  background-color: var(--primary_global);
+  background-color: transparent;
   width: 60px;
   height: 60px;
   position: relative;
@@ -336,7 +341,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
 .header .nav__menu-bar-control .bar-control .bar {
   width: 35px;
   height: 4px;
-  background: #fff;
+  background: var(--primary_global);
   margin-top: 4px;
   border-radius: 5px;
   -webkit-transition: 0.1111s ease-in-out;
@@ -389,8 +394,8 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
   position: fixed;
   right: -105%;
   z-index: 111;
-  -webkit-box-shadow: 5px 10px 11px orange;
-          box-shadow: 5px 10px 11px orange;
+  -webkit-box-shadow: 5px 10px 11px var(demo_green);
+          box-shadow: 5px 10px 11px var(demo_green);
   height: 100%;
   top: calc(var(--headerHeight));
   background-color: var(--BGColor);
@@ -443,7 +448,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
   .header .nav__menu-ul-link {
     padding: 0.5rem;
     border-radius: 20px;
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   .header .nav__menu-ul-link.active {
     background-color: var(--primary_global);
@@ -494,7 +499,9 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
 }
 
 :root {
-  --primary_global: #f08939;
+  --primary_global: #2e8b57;
+  --selection: rgb(90, 240, 90);
+  --demo_green: #4caf50;
   --BGColor: #ffffff;
   --FontColor: #222831;
   --fontFam: JSan;
@@ -684,7 +691,9 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
 }
 
 :root {
-  --primary_global: #f08939;
+  --primary_global: #2e8b57;
+  --selection: rgb(90, 240, 90);
+  --demo_green: #4caf50;
   --BGColor: #ffffff;
   --FontColor: #222831;
   --fontFam: JSan;

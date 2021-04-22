@@ -32,7 +32,7 @@
         &::first-letter {
           text-transform: capitalize;
         }
-        margin-top: 12px;
+        margin-top: 14px;
       }
     }
     .mainC {
@@ -141,19 +141,18 @@
       }
       .description {
         padding: 1rem;
-        background: $color_white;
+        background: var(--BGColor);
         position: relative;
         z-index: 1;
 
         h3 {
           text-transform: capitalize;
           color: $color_prime;
-          line-height: 1;
           margin: 0;
-          font-size: 1.7rem;
+          font-size: 1.3rem;
         }
         h2 {
-          font-size: 1.1rem;
+          font-size: 1rem;
           text-transform: uppercase;
           font-weight: 400;
           color: $color_grey_dark;
@@ -212,7 +211,7 @@
           &:before {
             transform: skewX(-3deg);
             content: "";
-            background: #fff;
+            background: var(--BGColor);
             width: 30px;
             position: absolute;
             left: -10px;

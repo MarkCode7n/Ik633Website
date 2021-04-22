@@ -1,7 +1,7 @@
 import Data from "./main.objects.js";
 import "./define.js";
 window.DefinePage.log = function () {
-  console.log(Data.barner_elem.home);
+  // console.log(Data.barner_elem.home);
 };
 
 window.DefinePage.SetBarner = function () {
@@ -15,28 +15,36 @@ window.DefinePage.SetBarner = function () {
     copyE.mjT2.textContent = item.hero_h2;
     copyE.gohref.href = item.button_link;
     copyE.gohref.querySelector("button").textContent = item.button_text;
-    copyE.home.style.background = `linear-gradient(298deg, black, #68595566), url(${item.image_path}) center/cover no-repeat`;
-    const { ...newE } = copyE;
-    const keys = Object.keys(newE);
-    const vals = Object.values(newE);
-    // console.log(vals);
+    copyE.home.style.background = `linear-gradient(298deg, black,#00000000), url(${item.image_path}) center/cover no-repeat`;
+    // const { home, ...newE } = copyE;
+    // const { ...newE } = copyE;
+    const { home } = copyE;
+    // convert keys to an array
+    const keys = Object.keys(home);
+    // convert values to an array
+    const vals = Object.values(home);
+    // \\console.log(vals, keys);
 
-    vals.forEach((v, ind) => {
-      animate(v);
-    });
+    // vals.forEach((v, ind) => {
+    //   animate(v);
+    // });
+    animate(home);
   }
+
   const animate = (e) => {
     e.animate(
       [
         {
-          opacity: 1,
+          opacity: 0.9,
+          // transform: "scale(1.2)",
         },
         {
-          opacity: 0.8,
+          opacity: 1,
+          // transform: "scale(1)",
         },
       ],
       {
-        duration: 1500,
+        duration: 2000,
         fill: "both",
       }
     );
@@ -80,7 +88,7 @@ window.DefinePage.SetBarner = function () {
       setInterval(() => {
         action.next();
         merge();
-      }, 15000);
+      }, 40000);
     };
     interval();
   }

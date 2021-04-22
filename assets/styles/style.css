@@ -11,7 +11,9 @@
 }
 
 :root {
-  --primary_global: #f08939;
+  --primary_global: #2e8b57;
+  --selection: rgb(90, 240, 90);
+  --demo_green: #4caf50;
   --BGColor: #ffffff;
   --FontColor: #222831;
   --fontFam: JSan;
@@ -197,8 +199,10 @@
   display: -ms-grid;
   display: grid;
   place-items: center;
+  background: var(--primary_global);
+  border: 3px solid var(--primary_global);
   overflow: hidden;
-  background-color: var(--primary_global);
+  background-color: transparent;
   width: 60px;
   height: 60px;
   position: relative;
@@ -222,7 +226,7 @@
 .header .nav__menu-bar-control .bar-control .bar {
   width: 35px;
   height: 4px;
-  background: #fff;
+  background: var(--primary_global);
   margin-top: 4px;
   border-radius: 5px;
   -webkit-transition: 0.1111s ease-in-out;
@@ -275,8 +279,8 @@
   position: fixed;
   right: -105%;
   z-index: 111;
-  -webkit-box-shadow: 5px 10px 11px orange;
-          box-shadow: 5px 10px 11px orange;
+  -webkit-box-shadow: 5px 10px 11px var(demo_green);
+          box-shadow: 5px 10px 11px var(demo_green);
   height: 100%;
   top: calc(var(--headerHeight));
   background-color: var(--BGColor);
@@ -329,7 +333,7 @@
   .header .nav__menu-ul-link {
     padding: 0.5rem;
     border-radius: 20px;
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   .header .nav__menu-ul-link.active {
     background-color: var(--primary_global);
@@ -469,6 +473,9 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
   overflow: hidden;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  background-color: var(--BGColor);
+  width: 100%;
+  height: 100%;
 }
 
 .loader.loaded {
@@ -528,7 +535,9 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
 }
 
 :root {
-  --primary_global: #f08939;
+  --primary_global: #2e8b57;
+  --selection: rgb(90, 240, 90);
+  --demo_green: #4caf50;
   --BGColor: #ffffff;
   --FontColor: #222831;
   --fontFam: JSan;
@@ -756,11 +765,11 @@ button {
 }
 
 ::-moz-selection {
-  background-color: #d6894f;
+  background-color: var(--selection);
 }
 
 ::selection {
-  background-color: #d6894f;
+  background-color: var(--selection);
 }
 
 .section {
@@ -789,11 +798,11 @@ button {
 #home .hero__ctx .major__text h1 {
   font-size: var(--heroFZ);
   text-transform: capitalize;
-  color: #f5ecec;
+  color: #c3e1c5;
 }
 
 #home .hero__ctx .major__text h2 {
-  color: #fcc55f;
+  color: #4caf50;
 }
 
 #home .hero__ctx .btn__container {
@@ -922,8 +931,8 @@ button {
   min-height: 182px;
   overflow: hidden;
   position: relative;
-  -webkit-box-shadow: -1px -1px 10px #ec892d;
-          box-shadow: -1px -1px 10px #ec892d;
+  -webkit-box-shadow: -1px -1px 10px #4caf50;
+          box-shadow: -1px -1px 10px #4caf50;
   border-radius: 8px;
   padding: 10px;
 }
@@ -935,11 +944,12 @@ button {
 .services__cards-container .cards .card_image img {
   width: initial;
   height: 100px;
+  opacity: 0.7;
 }
 
 .services__cards-container .cards .card_content h4 {
   text-transform: capitalize;
-  font-size: 2.1rem;
+  font-size: 1.9rem;
   -ms-grid-column-align: center;
       justify-self: center;
   margin-left: 15px;
@@ -970,6 +980,10 @@ section.sect-onMore .wrapper {
 }
 
 section.sect-onMore .wrapper .container {
+  border: 2px solid seagreen;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,12 +1035,14 @@ section.sect-onMore .wrapper .bbc {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 20px;
 }
 
 section.sect-onMore .wrapper .bbc h3 {
   font-size: 3rem;
   width: 236px;
   text-align: left;
+  text-transform: capitalize;
 }
 
 section.sect-onMore .wrapper .bbc-btn {
@@ -1229,7 +1245,7 @@ section.sect-onMore .wrapper .etc .img img {
 .blogs__container .wrapper .blog .content h3 {
   text-transform: capitalize;
   font-size: 26px;
-  color: #ee7447;
+  color: #4caf50;
 }
 
 .blogs__container .wrapper .blog .content p {
@@ -1243,7 +1259,7 @@ section.sect-onMore .wrapper .etc .img img {
   outline: none;
   text-transform: capitalize;
   padding: 9px 23px;
-  background-color: tomato;
+  background-color: #4caf50;
   border-radius: 8px;
   margin-top: 16px;
   font-size: 20px;
@@ -1254,7 +1270,7 @@ section.sect-onMore .wrapper .etc .img img {
   padding: 14px;
   font-size: 22px;
   text-transform: capitalize;
-  background-color: #ee7447;
+  background-color: #4caf50;
   border: 3px solid #ece6e6;
   border-radius: 5px;
   margin-top: 24px;

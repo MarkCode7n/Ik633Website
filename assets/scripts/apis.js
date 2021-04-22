@@ -22,30 +22,32 @@ window.DefinePage.Msg = function () {
 };
 
 window.DefinePage.addClass = function () {
-  const $ = (e) => document.querySelector(e);
-  let elems = [
-    $("footer .footer__content"),
-    // $(".blogs__container .wrapper"),
-    // $(".services__cards-container .cards"),
-  ];
+  const $ = (e) => document.querySelectorAll(e);
+  const elems = $(".un_grid");
 
   addClass(elems);
   function addClass(elems = []) {
+    // console.log(elems);
     if (window.screen.availWidth <= 334) {
       elems.forEach((elem) => {
         elem.style.removeProperty("display", "grid");
         elem.style.setProperty("display", "block");
+        if (elem.classList.contains("cards")) {
+          elem.querySelectorAll(".card").forEach((e) => {
+            e.style.setProperty("margin-top", "15px");
+            e.style.setProperty("flex-direction", "column");
+          });
+        }
       });
-      // elems[2].querySelectorAll(".card").forEach((e) => {
-      //   e.style.setProperty("margin-top", "15px");
-      // });
     } else {
       elems.forEach((elem) => {
         elem.style.setProperty("display", "grid");
-        elem.style.removeProperty("display", "block");
-      });
-      elems[2].querySelectorAll(".card").forEach((e) => {
-        e.style.setProperty("margin-top", "auto");
+        elem.style.removeProperty("display");
+        if (elem.classList.contains("cards")) {
+          elem.querySelectorAll(".card").forEach((e) => {
+            e.style.removeProperty("flex-direction");
+          });
+        }
       });
     }
   }
@@ -53,6 +55,29 @@ window.DefinePage.addClass = function () {
     addClass(elems);
   };
 };
+
+window.DefinePage.ChangeFonts = function () {
+  const fonts = ["ArchsDaughter", "Teko", "Lobster"];
+  const e = document.querySelector(".header .nav__menu-logo a");
+  let count = 0;
+  setInterval(() => {
+    count++;
+    count > fonts.length ? (count = 0) : count;
+    e.style.fontFamily = fonts[count];
+    e.animate([
+      {
+        opacity: 0.9,
+      },
+      {
+        opacity: 1,
+      },
+    ]);
+  }, 5000);
+};
 window["addEventListener"]("DOMContentLoaded", () => {
-  return window.DefinePage.Msg(), window.DefinePage.addClass();
+  return (
+    window.DefinePage.Msg(),
+    window.DefinePage.addClass(),
+    window.DefinePage.ChangeFonts()
+  );
 });

@@ -10,7 +10,9 @@
 }
 
 :root {
-  --primary_global: #f08939;
+  --primary_global: #2e8b57;
+  --selection: rgb(90, 240, 90);
+  --demo_green: #4caf50;
   --BGColor: #ffffff;
   --FontColor: #222831;
   --fontFam: JSan;

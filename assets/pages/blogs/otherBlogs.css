@@ -36,7 +36,7 @@
 .bloggy__container .bloggy .blog__header p {
   color: var(--lightShade);
   font-size: 21px;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .bloggy__container .bloggy .blog__header p::first-letter {
@@ -161,7 +161,7 @@
 
 .other__blogs .wrapper .blog-card .description {
   padding: 1rem;
-  background: #fff;
+  background: var(--BGColor);
   position: relative;
   z-index: 1;
 }
@@ -169,13 +169,12 @@
 .other__blogs .wrapper .blog-card .description h3 {
   text-transform: capitalize;
   color: #5ad67d;
-  line-height: 1;
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
 .other__blogs .wrapper .blog-card .description h2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 400;
   color: #a2a2a2;
@@ -250,7 +249,7 @@
     -webkit-transform: skewX(-3deg);
             transform: skewX(-3deg);
     content: "";
-    background: #fff;
+    background: var(--BGColor);
     width: 30px;
     position: absolute;
     left: -10px;

@@ -18,8 +18,10 @@
     &-bar-control {
       display: grid;
       place-items: center;
+      background: var(--primary_global);
+      border: 3px solid var(--primary_global);
       overflow: hidden;
-      background-color: var(--primary_global);
+      background-color: transparent;
       width: 60px;
       height: 60px;
       position: relative;
@@ -39,7 +41,7 @@
         .bar {
           width: 35px;
           height: 4px;
-          background: #fff;
+          background: var(--primary_global);
           margin-top: 4px;
           border-radius: 5px;
           transition: 0.1111s ease-in-out;
@@ -93,7 +95,7 @@
       position: fixed;
       right: -105%;
       z-index: 111;
-      box-shadow: 5px 10px 11px orange;
+      box-shadow: 5px 10px 11px var(demo_green);
       height: 100%;
       top: calc(var(--headerHeight));
       background-color: var(--BGColor);
@@ -133,7 +135,7 @@
         &-link {
           padding: 0.5rem;
           border-radius: 20px;
-          font-size: 1.3em;
+          font-size: 1.1em;
 
           &.active {
             background-color: var(--primary_global);

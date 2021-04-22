@@ -42,7 +42,7 @@ button {
 }
 
 ::selection {
-  background-color: #d6894f;
+  background-color: var(--selection);
 }
 
 .section {
@@ -72,10 +72,10 @@ button {
       h1 {
         font-size: var(--heroFZ);
         text-transform: capitalize;
-        color: rgb(245, 236, 236);
+        color: #c3e1c5;
       }
       h2 {
-        color: rgb(252, 197, 95);
+        color: #4caf50;
       }
     }
 
@@ -183,7 +183,7 @@ button {
         min-height: 182px;
         overflow: hidden;
         position: relative;
-        box-shadow: -1px -1px 10px rgb(236, 137, 45);
+        box-shadow: -1px -1px 10px #4caf50;
         border-radius: 8px;
         padding: 10px;
 
@@ -193,13 +193,14 @@ button {
           img {
             width: initial;
             height: 100px;
+            opacity: 0.7;
           }
         }
 
         &_content {
           h4 {
             text-transform: capitalize;
-            font-size: 2.1rem;
+            font-size: 1.9rem;
             justify-self: center;
             margin-left: 15px;
             margin-right: 15px;
@@ -228,6 +229,10 @@ section.sect-onMore {
   .wrapper {
     margin: 0px var(--defaultMargin);
     .container {
+      border: 2px solid seagreen;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 1rem auto;
       @media screen and (min-width: 768px) {
         display: grid;
         gap: 20px;
@@ -251,10 +256,12 @@ section.sect-onMore {
       align-items: self-end;
       flex-direction: column;
       flex-wrap: wrap;
+      padding: 20px;
       h3 {
         font-size: 3rem;
         width: 236px;
         text-align: left;
+        text-transform: capitalize;
       }
       &-btn {
         text-transform: capitalize;
@@ -419,7 +426,7 @@ section.sect-onMore {
           h3 {
             text-transform: capitalize;
             font-size: 26px;
-            color: rgb(238, 116, 71);
+            color: #4caf50;
           }
           p {
             margin-top: 8px;
@@ -433,7 +440,7 @@ section.sect-onMore {
             padding: 9px 23px;
             //  position: absolute;
             //  bottom: 0%;
-            background-color: tomato;
+            background-color: #4caf50;
             border-radius: 8px;
             margin-top: 16px;
             font-size: 20px;
@@ -447,7 +454,7 @@ section.sect-onMore {
         padding: 14px;
         font-size: 22px;
         text-transform: capitalize;
-        background-color: #ee7447;
+        background-color: #4caf50;
         border: 3px solid #ece6e6;
         border-radius: 5px;
         margin-top: 24px;
