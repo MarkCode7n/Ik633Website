@@ -446,6 +446,7 @@ footer .footer__wrapper .container .fair__well .container ul li a img:hover {
     -webkit-transition: none;
     transition: none;
     margin-right: 2em;
+    padding: initial;
   }
   .header .nav__menu-ul-link {
     padding: 0.5rem;

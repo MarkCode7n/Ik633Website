@@ -60,99 +60,125 @@ button {
 //MAIN
 
 #home {
-  z-index: -1;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  & > .Slide_C {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 10px;
 
-  position: static;
-  background: linear-gradient(298deg, black, #68595566),
-    url(../images/pages/Zrzut-ekranu-864.jpg) center/cover no-repeat;
-  .hero__ctx {
-    .major__text {
-      text-align: CENTER;
-      h1 {
-        font-size: var(--heroFZ);
-        text-transform: capitalize;
-        color: #c3e1c5;
+    & > .brief {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+        transform: translateX(0);
       }
-      h2 {
-        color: #4caf50;
+      &.prev {
+        transform: translateX(-100%);
       }
-    }
-
-    .btn__container {
-      flex-direction: row;
-      position: relative;
-      flex-wrap: nowrap;
-      top: 50px;
-      justify-content: space-between;
-
-      .go__btn {
-        padding: 14px;
-        font-size: 22px;
-        margin-top: 4rem;
-        position: relative;
-        top: -80px;
-        text-transform: capitalize;
-        border-radius: 8px;
-        box-shadow: -1px 1px 7px 3px #2d3f583d;
-        border: 3px solid var(--primary_global);
-        background-color: transparent;
-        color: #fff;
-        outline: none;
+      &.next {
+        transform: translateX(100%);
       }
-
-      .prev__btn,
-      .next__btn {
-        padding: 22px;
-        font-size: 19px;
-        border-radius: 100%;
-        outline: none;
-        font-weight: bolder;
-        border: 2px solid var(--primary_global);
-        background-color: transparent;
-        position: relative;
-        overflow: hidden;
-        display: grid;
-        top: 80px;
-        color: #fff;
-        place-items: center;
-
-        span {
-          color: white;
-          z-index: 1;
-          position: relative;
-          top: 0;
-          left: 0;
-        }
+      & > .bg_C {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
 
         &::before {
           content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 1;
-          transform: scale(0);
           width: 100%;
           height: 100%;
-          transition: 0.3s ease-in-out;
-          border-radius: 100%;
-          background-color: var(--primary_global);
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          right: 0%;
+          background-color: rgba(0, 0, 0, 0.26);
         }
-
-        &:hover,
-        &:active {
-          &::before {
-            transform: scale(1);
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .Dom_C {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        right: 0%;
+        h1 {
+          text-transform: capitalize;
+          font-size: var(--heroFZ);
+        }
+        h4 {
+          color: greenyellow;
+        }
+        .go_Btn {
+          margin-top: 1.7rem;
+          a {
+            text-transform: capitalize;
+            color: white;
+            // display: block;
+            padding: 0.45rem 0.55rem;
+            border: 2px solid greenyellow;
+            border-radius: 6px;
+            font-size: 21px;
           }
         }
       }
-
-      .prev__btn {
-        left: 20px;
+    }
+  }
+  .btn_C {
+    .btn {
+      position: absolute;
+      top: 70%;
+      padding: 0.55rem 0.65rem;
+      font-size: 24px;
+      border-radius: 100px;
+      border: 2px solid greenyellow;
+      background-color: transparent;
+      color: white;
+      overflow: hidden;
+      span {
+        z-index: 1;
+        position: relative;
       }
-
-      .next__btn {
-        right: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--demo_green);
+        transition: transform 0.3s ease-in-out;
+        transform: scale(0);
+        border-radius: 100px;
+      }
+      &:hover::before {
+        transform: scale(1.1);
+      }
+      &.prev_btn {
+        left: 0.5rem;
+      }
+      &.next_btn {
+        right: 0.5rem;
       }
     }
   }
