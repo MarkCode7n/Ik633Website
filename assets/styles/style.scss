@@ -74,7 +74,7 @@ button {
     transform-style: preserve-3d;
     perspective: 10px;
 
-    & > .brief {
+    & .brief {
       position: absolute;
       top: 0;
       left: 0;
@@ -86,11 +86,11 @@ button {
         opacity: 1;
         transform: translateX(0);
       }
-      &.prev {
-        transform: translateX(-100%);
-      }
       &.next {
-        transform: translateX(100%);
+        transform: translateX(100px);
+      }
+      &.last {
+        transform: translateX(-100px);
       }
       & > .bg_C {
         position: absolute;
@@ -118,7 +118,7 @@ button {
       }
       .Dom_C {
         position: absolute;
-        top: 50%;
+        top: 35%;
         left: 0%;
         right: 0%;
         h1 {
@@ -180,14 +180,31 @@ button {
       &.next_btn {
         right: 0.5rem;
       }
+      @media screen and (min-width: 450px) {
+        &.prev_btn {
+          left: 5rem;
+        }
+        &.next_btn {
+          right: 5rem;
+        }
+      }
+      @media screen and (min-width: 701px) {
+        &.prev_btn {
+          left: 8rem;
+        }
+        &.next_btn {
+          right: 8rem;
+        }
+      }
+      @media screen and (min-width: 800px) {
+        &.prev_btn {
+          left: 21rem;
+        }
+        &.next_btn {
+          right: 21rem;
+        }
+      }
     }
-  }
-}
-
-@media screen and (min-width: 678px) {
-  .home__ .hero__ctx .btn__container .go__btn {
-    font-size: 1.5rem;
-    top: 42px;
   }
 }
 

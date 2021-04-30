@@ -11,16 +11,18 @@ window.DefinePage.SetBarner = function () {
     nextBtn = elems.nextB,
     container = elems.SC;
 
-  if (slides.length === 1)
-    (prevBtn.style.display = "none"), (nextBtn.style.display = "none");
+  slides.length === 1
+    ? ((prev_Btn.style.display = "none"), (next_Btn.style.display = "none"))
+    : function () {
+        return;
+      };
 
   let slideCopy = [...slides];
   if (slides.length === 2) slideCopy = [...slides, ...slides];
 
-  function merge() {
+  (function merge() {
     container.innerHTML = slideCopy
       .map((slide, slideStartIndex) => {
-        let pos = "next";
         const {
           image_path,
           hero_text,
@@ -28,12 +30,13 @@ window.DefinePage.SetBarner = function () {
           button_link,
           button_text,
         } = slide;
+        let pos = "next";
         switch (slideStartIndex) {
           case 0:
             pos = "active";
             break;
           case slideCopy.length - 1:
-            pos = "prev";
+            pos = "last";
             break;
           default:
             pos = "next";
@@ -59,31 +62,55 @@ window.DefinePage.SetBarner = function () {
         </div>`;
       })
       .join("");
-  }
+  })();
 
   function startSlide(T) {
     const active = document.querySelector(".active"),
-      prev = document.querySelector(".prev");
+      prev = document.querySelector(".last");
     let next = active.nextElementSibling;
 
     if (!next) next = container.firstElementChild;
 
-    active.classList.remove("active");
-    next.classList.remove("next");
-    prev.classList.remove("prev");
+    active.classList.remove(["active"]);
+    next.classList.remove(["next"]);
+    prev.classList.remove(["last"]);
 
     if (T == "prev") {
       active.classList.add("next"),
         prev.classList.add("active"),
         (next = prev.previousElementSibling);
       if (!next) next = container.lastElementChild;
-      next.classList.remove("next"), next.classList.add("prev");
+      next.classList.remove(["next"]), next.classList.add("last");
       return;
     }
     prev.classList.add("next");
-    active.classList.add("prev");
+    active.classList.add("last");
     next.classList.add("active");
   }
+  nextBtn.addEventListener(
+    "click",
+    () => {
+      startSlide(),
+        container
+          .querySelectorAll(".brief .bg_C") //
+          .forEach((bgc) => {
+            animate(bgc);
+          });
+    },
+    false
+  );
+  prevBtn.addEventListener(
+    "click",
+    () => {
+      startSlide("prev"),
+        container
+          .querySelectorAll(".brief .bg_C") //
+          .forEach((bgc) => {
+            animate(bgc);
+          });
+    },
+    false
+  );
   const animate = (e) => {
     e.animate(
       [
@@ -97,31 +124,6 @@ window.DefinePage.SetBarner = function () {
       { duration: 500, fill: "forwards" }
     );
   };
-  merge();
-  prevBtn.addEventListener(
-    "click",
-    () => {
-      startSlide("prev");
-      container
-        .querySelectorAll(".brief .bg_C") //
-        .forEach((bgc) => {
-          animate(bgc);
-        });
-    },
-    false
-  );
-  nextBtn.addEventListener(
-    "click",
-    () => {
-      startSlide();
-      container
-        .querySelectorAll(".brief .bg_C") //
-        .forEach((bgc) => {
-          animate(bgc);
-        });
-    },
-    false
-  );
 };
 window.addEventListener("DOMContentLoaded", function () {
   return window.DefinePage.SetBarner();

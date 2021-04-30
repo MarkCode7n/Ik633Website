@@ -56,4 +56,4 @@ const b_e = {
   SC: $(".Slide_C"),
 };
 const global_elem = [{}];
-export default { b_e, barner_obj };
+export default { b_e, barner_obj, global_elem };

@@ -816,7 +816,7 @@ button {
           perspective: 10px;
 }
 
-#home > .Slide_C > .brief {
+#home > .Slide_C .brief {
   position: absolute;
   top: 0;
   left: 0;
@@ -827,23 +827,23 @@ button {
   opacity: 0;
 }
 
-#home > .Slide_C > .brief.active {
+#home > .Slide_C .brief.active {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-#home > .Slide_C > .brief.prev {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+#home > .Slide_C .brief.next {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
 }
 
-#home > .Slide_C > .brief.next {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+#home > .Slide_C .brief.last {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
 }
 
-#home > .Slide_C > .brief > .bg_C {
+#home > .Slide_C .brief > .bg_C {
   position: absolute;
   top: 0;
   left: 0;
@@ -852,7 +852,7 @@ button {
   width: 100%;
 }
 
-#home > .Slide_C > .brief > .bg_C::before {
+#home > .Slide_C .brief > .bg_C::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -863,7 +863,7 @@ button {
   background-color: rgba(0, 0, 0, 0.26);
 }
 
-#home > .Slide_C > .brief > .bg_C img {
+#home > .Slide_C .brief > .bg_C img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -871,27 +871,27 @@ button {
      object-position: center;
 }
 
-#home > .Slide_C > .brief .Dom_C {
+#home > .Slide_C .brief .Dom_C {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 0%;
   right: 0%;
 }
 
-#home > .Slide_C > .brief .Dom_C h1 {
+#home > .Slide_C .brief .Dom_C h1 {
   text-transform: capitalize;
   font-size: var(--heroFZ);
 }
 
-#home > .Slide_C > .brief .Dom_C h4 {
+#home > .Slide_C .brief .Dom_C h4 {
   color: greenyellow;
 }
 
-#home > .Slide_C > .brief .Dom_C .go_Btn {
+#home > .Slide_C .brief .Dom_C .go_Btn {
   margin-top: 1.7rem;
 }
 
-#home > .Slide_C > .brief .Dom_C .go_Btn a {
+#home > .Slide_C .brief .Dom_C .go_Btn a {
   text-transform: capitalize;
   color: white;
   padding: 0.45rem 0.55rem;
@@ -948,10 +948,30 @@ button {
   right: 0.5rem;
 }
 
-@media screen and (min-width: 678px) {
-  .home__ .hero__ctx .btn__container .go__btn {
-    font-size: 1.5rem;
-    top: 42px;
+@media screen and (min-width: 450px) {
+  #home .btn_C .btn.prev_btn {
+    left: 5rem;
+  }
+  #home .btn_C .btn.next_btn {
+    right: 5rem;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  #home .btn_C .btn.prev_btn {
+    left: 8rem;
+  }
+  #home .btn_C .btn.next_btn {
+    right: 8rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #home .btn_C .btn.prev_btn {
+    left: 21rem;
+  }
+  #home .btn_C .btn.next_btn {
+    right: 21rem;
   }
 }
 
