@@ -4,14 +4,14 @@ window.DefinePage.log = function () {
   // console.log(Data.barner_elem.home);
 };
 
-window.DefinePage.SetBarner = function () {
+const SetBarner = function () {
   const slides = Data.barner_obj,
     elems = Data.b_e,
     prevBtn = elems.prevB,
     nextBtn = elems.nextB,
     container = elems.SC;
 
-  slides.length === 1
+  slides.length == 1
     ? ((prev_Btn.style.display = "none"), (next_Btn.style.display = "none"))
     : function () {
         return;
@@ -90,24 +90,24 @@ window.DefinePage.SetBarner = function () {
   nextBtn.addEventListener(
     "click",
     () => {
-      startSlide(),
-        container
-          .querySelectorAll(".brief .bg_C") //
-          .forEach((bgc) => {
-            animate(bgc);
-          });
+      startSlide();
+      container
+        .querySelectorAll(".brief .bg_C") //
+        .forEach((bgc) => {
+          animate(bgc);
+        });
     },
     false
   );
   prevBtn.addEventListener(
     "click",
     () => {
-      startSlide("prev"),
-        container
-          .querySelectorAll(".brief .bg_C") //
-          .forEach((bgc) => {
-            animate(bgc);
-          });
+      startSlide("prev");
+      container
+        .querySelectorAll(".brief .bg_C") //
+        .forEach((bgc) => {
+          animate(bgc);
+        });
     },
     false
   );
@@ -125,6 +125,6 @@ window.DefinePage.SetBarner = function () {
     );
   };
 };
-window.addEventListener("DOMContentLoaded", function () {
-  return window.DefinePage.SetBarner();
-});
+// window.addEventListener("DOMContentLoaded", function () {
+SetBarner();
+// });
