@@ -827,18 +827,18 @@ button {
   opacity: 0;
 }
 
-#home > .Slide_C .brief.active {
+#home > .Slide_C .brief.act {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-#home > .Slide_C .brief.next {
+#home > .Slide_C .brief.nxt {
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
 }
 
-#home > .Slide_C .brief.last {
+#home > .Slide_C .brief.lst {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
 }
@@ -860,7 +860,7 @@ button {
   top: 0%;
   left: 0%;
   right: 0%;
-  background-color: rgba(0, 0, 0, 0.26);
+  background-color: rgba(0, 0, 0, 0.513);
 }
 
 #home > .Slide_C .brief > .bg_C img {
@@ -879,22 +879,25 @@ button {
 }
 
 #home > .Slide_C .brief .Dom_C h1 {
+  color: white;
   text-transform: capitalize;
   font-size: var(--heroFZ);
 }
 
 #home > .Slide_C .brief .Dom_C h4 {
   color: greenyellow;
+  font-size: 24px;
+  margin-top: 1.3em;
 }
 
 #home > .Slide_C .brief .Dom_C .go_Btn {
-  margin-top: 1.7rem;
+  margin-top: 2rem;
 }
 
 #home > .Slide_C .brief .Dom_C .go_Btn a {
   text-transform: capitalize;
   color: white;
-  padding: 0.45rem 0.55rem;
+  padding: 0.65rem 0.75rem;
   border: 2px solid greenyellow;
   border-radius: 6px;
   font-size: 21px;

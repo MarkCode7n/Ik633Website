@@ -1,130 +1,117 @@
-import Data from "./main.objects.js";
-import "./define.js";
-window.DefinePage.log = function () {
-  // console.log(Data.barner_elem.home);
-};
+import barner_data from "./main.objects.js";
+window.addEventListener("DOMContentLoaded", () => {
+  const $ = function (id = HTMLElement) {
+    return document.querySelector(id);
+    // return "string" === typeof id ? document.querySelector(id) : id, id;
+  };
+  const _ = function (e) {
+    return "string" === typeof id ? document.querySelector(e) : e;
+  };
 
-const SetBarner = function () {
-  const slides = Data.barner_obj,
-    elems = Data.b_e,
-    prevBtn = elems.prevB,
-    nextBtn = elems.nextB,
-    container = elems.SC;
+  const prevB = $("#prev__btn"),
+    nextB = $("#next__btn"),
+    SC = $(".Slide_C");
 
-  slides.length == 1
-    ? ((prev_Btn.style.display = "none"), (next_Btn.style.display = "none"))
-    : function () {
-        return;
-      };
+  barner_data.length === 1
+    ? ((prevB.style.display = none), (nextB.style.display = none))
+    : () => void 0;
 
-  let slideCopy = [...slides];
-  if (slides.length === 2) slideCopy = [...slides, ...slides];
+  let curr = [...barner_data];
+  barner_data.length === 2
+    ? (curr = [...barner_data, ...barner_data])
+    : () => void 0;
 
-  (function merge() {
-    container.innerHTML = slideCopy
-      .map((slide, slideStartIndex) => {
-        const {
-          image_path,
-          hero_text,
-          hero_h2,
-          button_link,
-          button_text,
-        } = slide;
+  (function () {
+    SC.innerHTML = curr
+      .map((slide, index) => {
+        const { img_path, h1, h4, bLink, bTxt } = slide;
         let pos = "next";
-        switch (slideStartIndex) {
+        switch (index) {
           case 0:
-            pos = "active";
+            pos = "act";
             break;
-          case slideCopy.length - 1:
-            pos = "last";
+          case curr.length - 1:
+            pos = "lst";
             break;
           default:
-            pos = "next";
+            pos = "nxt";
             break;
         }
-        if (slides.length <= 1) pos = "active";
+        barner_data.length <= 1 ? (pos = "act") : pos;
 
-        return `
-      <div class="brief ${pos}">
-          <div class="bg_C">
-            <img
-              src="${image_path}"
-              alt="background_image"
-            />
-          </div>
-          <div class="Dom_C">
-            <h1>${hero_text}</h1>
-            <h4>${hero_h2}</h4>
-            <div class="go_Btn if__active">
-              <a href="${button_link}" class="go_link">${button_text}</a>
-            </div>
-          </div>
-        </div>`;
+        return ` 
+        <div class="brief ${pos}">
+             <div class="bg_C">
+                <img
+                  src="${img_path}"
+                  alt="background_image"
+                />
+              </div>
+              <div class="Dom_C">
+                <h1>${h1}</h1>
+                <h4>${h4}</h4>
+                <div class="go_Btn if__active">
+                  <a href="${bLink}" class="go_link">${bTxt}</a>
+                </div>
+              </div>
+            </div>`;
       })
       .join("");
-  })();
 
+    SC.querySelectorAll(".breif .bg_C").forEach((elem) => {
+      animate(elem);
+    });
+  })();
+  function animate(e) {
+    e.animate([{ transform: "scale(1.5)" }, { transform: "scale(1)" }], {
+      duration: 3000,
+      fill: "forwards",
+    });
+  }
   function startSlide(T) {
-    const active = document.querySelector(".active"),
-      prev = document.querySelector(".last");
+    const active = $(".act");
+    const last = $(".lst");
     let next = active.nextElementSibling;
 
-    if (!next) next = container.firstElementChild;
+    if (!next) next = SC.firstElementChild;
 
-    active.classList.remove(["active"]);
-    next.classList.remove(["next"]);
-    prev.classList.remove(["last"]);
+    active.classList.remove("act");
+    next.classList.remove("nxt");
+    last.classList.remove("lst");
 
     if (T == "prev") {
-      active.classList.add("next"),
-        prev.classList.add("active"),
-        (next = prev.previousElementSibling);
-      if (!next) next = container.lastElementChild;
-      next.classList.remove(["next"]), next.classList.add("last");
+      active.classList.add("nxt"),
+        last.classList.add("act"),
+        (next = last.previousElementSibling);
+      if (!next) next = SC.lastElementChild;
+
+      next.classList.remove(["nxt"]), next.classList.add("lst");
       return;
     }
-    prev.classList.add("next");
-    active.classList.add("last");
-    next.classList.add("active");
+
+    last.classList.add("nxt");
+    active.classList.add("lst");
+    next.classList.add("act");
   }
-  nextBtn.addEventListener(
+  nextB.addEventListener(
     "click",
     () => {
       startSlide();
-      container
-        .querySelectorAll(".brief .bg_C") //
-        .forEach((bgc) => {
-          animate(bgc);
-        });
+      SC.querySelectorAll(".breif .bg_C").forEach((elem) => {
+        animate(elem);
+      });
+      console.log(elem);
     },
     false
   );
-  prevBtn.addEventListener(
+  prevB.addEventListener(
     "click",
     () => {
       startSlide("prev");
-      container
-        .querySelectorAll(".brief .bg_C") //
-        .forEach((bgc) => {
-          animate(bgc);
-        });
+      SC.querySelectorAll(".breif .bg_C").forEach((elem) => {
+        animate(elem);
+      });
     },
     false
   );
-  const animate = (e) => {
-    e.animate(
-      [
-        {
-          transform: "scale(1.3)",
-        },
-        {
-          transform: "scale(1)",
-        },
-      ],
-      { duration: 500, fill: "forwards" }
-    );
-  };
-};
-// window.addEventListener("DOMContentLoaded", function () {
-SetBarner();
-// });
+});
