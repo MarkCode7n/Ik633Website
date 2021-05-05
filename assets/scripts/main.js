@@ -100,7 +100,6 @@ window.addEventListener("DOMContentLoaded", () => {
       SC.querySelectorAll(".breif .bg_C").forEach((elem) => {
         animate(elem);
       });
-      console.log(elem);
     },
     false
   );
