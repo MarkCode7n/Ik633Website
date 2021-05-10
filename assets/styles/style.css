@@ -829,18 +829,18 @@ button {
 
 #home > .Slide_C .brief.act {
   opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 #home > .Slide_C .brief.nxt {
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 #home > .Slide_C .brief.lst {
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 #home > .Slide_C .brief > .bg_C {
@@ -1188,7 +1188,7 @@ section.sect-onMore .wrapper .etc .img img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: img0;
-  background-image: url(../images/main/estate.jpg);
+  background-color: orangered;
 }
 
 .about__cta-bt-container .img-1 {
@@ -1196,14 +1196,14 @@ section.sect-onMore .wrapper .etc .img img {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: img1;
-  background-image: url(../images/main/fixes.jpeg);
+  background-color: #4bdf50;
 }
 
 .about__cta-bt-container .img-2 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: img2;
-  background-image: url(../images/main/gadgets.jpg);
+  background-color: #f6f63f;
 }
 
 .about__cta-bt-container .img-3 {
@@ -1211,7 +1211,7 @@ section.sect-onMore .wrapper .etc .img img {
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   grid-area: img3;
-  background-image: url(../images/main/jobs.jpg);
+  background-color: #12acd3;
 }
 
 .about__cta-bt-container .img-4 {
@@ -1219,7 +1219,7 @@ section.sect-onMore .wrapper .etc .img img {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: img4;
-  background-image: url(../images/main/estate.jpg);
+  background-color: #f02a83;
 }
 
 .about__cta-bt-container .txt-container .text p.abt-text {

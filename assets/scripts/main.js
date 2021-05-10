@@ -20,7 +20,12 @@ window.addEventListener("DOMContentLoaded", () => {
   barner_data.length === 2
     ? (curr = [...barner_data, ...barner_data])
     : () => void 0;
-
+    function animate(e) {
+      e.animate([{ transform: "scale(1.5)" }, { transform: "scale(1)" }], {
+        duration: 3000,
+        fill: "forwards",
+      });
+    }
   (function () {
     SC.innerHTML = curr
       .map((slide, index) => {
@@ -58,16 +63,10 @@ window.addEventListener("DOMContentLoaded", () => {
       })
       .join("");
 
-    SC.querySelectorAll(".breif .bg_C").forEach((elem) => {
+    SC.querySelectorAll(".brief > .bg_C").forEach((elem) => {
       animate(elem);
     });
   })();
-  function animate(e) {
-    e.animate([{ transform: "scale(1.5)" }, { transform: "scale(1)" }], {
-      duration: 3000,
-      fill: "forwards",
-    });
-  }
   function startSlide(T) {
     const active = $(".act");
     const last = $(".lst");
@@ -96,8 +95,10 @@ window.addEventListener("DOMContentLoaded", () => {
   nextB.addEventListener(
     "click",
     () => {
-      startSlide();
-      SC.querySelectorAll(".breif .bg_C").forEach((elem) => {
+      startSlide(),
+      SC.
+       querySelectorAll(".brief > .bg_C")
+      .forEach((elem) => {
         animate(elem);
       });
     },
@@ -106,8 +107,10 @@ window.addEventListener("DOMContentLoaded", () => {
   prevB.addEventListener(
     "click",
     () => {
-      startSlide("prev");
-      SC.querySelectorAll(".breif .bg_C").forEach((elem) => {
+      startSlide("prev"),
+      SC.
+      querySelectorAll(".brief > .bg_C").
+      forEach((elem) => {
         animate(elem);
       });
     },

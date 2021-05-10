@@ -84,13 +84,13 @@ button {
       opacity: 0;
       &.act {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0%);
       }
       &.nxt {
-        transform: translateX(100px);
+        transform: translateX(100%);
       }
       &.lst {
-        transform: translateX(-100px);
+        transform: translateX(-100%);
       }
       & > .bg_C {
         position: absolute;
@@ -370,23 +370,29 @@ section.sect-onMore {
     }
     .img-0 {
       grid-area: img0;
-      background-image: url(../images/main/estate.jpg);
+      // background-image: url(../images/main/estate.jpg);
+      background-color: orangered;
     }
     .img-1 {
       grid-area: img1;
-      background-image: url(../images/main/fixes.jpeg);
+      // background-image: url(../images/main/fixes.jpeg);
+      background-color: #4bdf50;
     }
     .img-2 {
       grid-area: img2;
-      background-image: url(../images/main/gadgets.jpg);
+      // background-image: url(../images/main/gadgets.jpg);
+      background-color: rgb(246, 246, 63);
     }
     .img-3 {
       grid-area: img3;
-      background-image: url(../images/main/jobs.jpg);
+      // background-image: url(../images/main/jobs.jpg);
+      background-color: rgb(18, 172, 211);
     }
     .img-4 {
       grid-area: img4;
-      background-image: url(../images/main/estate.jpg);
+      // background-image: url(../images/main/estate.jpg);
+
+      background-color: rgb(240, 42, 131);
     }
 
     .txt-container {
