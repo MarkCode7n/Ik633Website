@@ -8,12 +8,14 @@ window.DefinePage.setLS = function () {
   const bc = document.body.classList;
 
   const saveDarkMode_ls = () => {
+    dark_mode = localStorage.getItem("dark_mode");
     bc.remove("default");
     bc.add("Dark_Mode");
     img.classList.add("invert__this");
     localStorage.setItem("dark_mode", "enabled");
   };
   const deleteDarkMode_ls = () => {
+    dark_mode = localStorage.getItem("dark_mode");
     bc.remove("Dark_Mode");
     bc.add("default");
     img.classList.remove("invert__this");
