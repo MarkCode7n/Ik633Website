@@ -19,6 +19,7 @@ window.DefinePage.SetNav = function () {
     }
   });
 };
+
 document.querySelector("footer").innerHTML = ` <div class="footer__wrapper">
       <div class="container">
         <br /><br /><br />
