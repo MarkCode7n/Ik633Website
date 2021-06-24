@@ -884,4 +884,18 @@ button {
 .main {
   margin-top: calc(var(--headerHeight));
 }
+
+.ctxn .domn p {
+  font-size: 21px;
+  line-height: 34px;
+  color: var(--shaded);
+}
+
+.ctxn .domn .steps {
+  color: white;
+  background-color: var(--demo_green);
+  padding: 6px 4px;
+  margin-right: 12px;
+  border-radius: 3px;
+}
 /*# sourceMappingURL=style.css.map */
