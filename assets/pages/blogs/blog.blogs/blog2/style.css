@@ -884,4 +884,53 @@ button {
 .main {
   margin-top: calc(var(--headerHeight));
 }
+
+.main .top10 {
+  margin-top: 80px;
+}
+
+.main .top10 .res .ppt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .top10 .res .ppt .counter {
+  margin-right: 8px;
+  background-color: var(--primary_global);
+  color: white;
+  -webkit-box-shadow: 1px 0px 20px rgba(95, 93, 93, 0.6);
+          box-shadow: 1px 0px 20px rgba(95, 93, 93, 0.6);
+  border-radius: 50%;
+  padding: 6px;
+  width: 50px;
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+}
+
+.main .top10 .res .ppt .es h4 {
+  font-size: 24px;
+}
+
+.main .top10 .res .image {
+  height: 280px;
+  overflow: hidden;
+  margin: 18px 0px 18px 0px;
+  border-radius: 6px;
+}
+
+.main .top10 .desc p {
+  font-size: 21px;
+  line-height: 25px;
+  color: var(--shaded);
+}
 /*# sourceMappingURL=style.css.map */

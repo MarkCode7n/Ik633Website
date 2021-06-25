@@ -49,4 +49,45 @@ button {
 
 .main {
   margin-top: calc(var(--headerHeight));
+  .top10 {
+    margin-top: 80px;
+    .res {
+      .ppt {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .counter {
+          margin-right: 8px;
+          background-color: var(--primary_global);
+          color: white;
+          box-shadow: 1px 0px 20px rgba(95, 93, 93, 0.6);
+          border-radius: 50%;
+          padding: 6px;
+          width: 50px;
+          height: 50px;
+          display: grid;
+          place-items: center;
+          margin-bottom: 8px;
+        }
+        .es {
+          h4 {
+            font-size: 24px;
+          }
+        }
+      }
+      .image {
+        height: 280px;
+        overflow: hidden;
+        margin: 18px 0px 18px 0px;
+        border-radius: 6px;
+      }
+    }
+    .desc {
+      p {
+        font-size: 21px;
+        line-height: 25px;
+        color: var(--shaded);
+      }
+    }
+  }
 }

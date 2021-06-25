@@ -903,7 +903,6 @@ button {
 
 .main .top10 .res .ppt .counter {
   margin-right: 8px;
-  font-size: 2rem;
   background-color: var(--primary_global);
   color: white;
   -webkit-box-shadow: 1px 0px 20px rgba(95, 93, 93, 0.6);
